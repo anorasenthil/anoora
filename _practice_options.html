@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: var(--paper); padding: 0; }
+  .opt-label { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); padding: 2rem 3rem 0; }
+  .opt-wrap { border-bottom: 8px solid var(--ink); padding-bottom: 2rem; }
+
+  /* Option 2: compact grouped header, no space-between */
+  .opt2 .intro-left { display: block; }
+  .opt2 .intro-aside { margin-top: 1.75rem; }
+
+  /* Option 3: oversized numeral anchor */
+  .opt3 .intro-left { display: block; position: relative; }
+  .opt3 .intro-aside .stat {
+    font-size: 9rem;
+    line-height: 0.8;
+    display: block;
+    color: var(--ink);
+    opacity: 0.9;
+  }
+  .opt3 .intro-aside p { margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<div class="opt-wrap opt1">
+  <div class="opt-label">Option 1 — merge into stats row, left column stays quiet</div>
+  <section class="intro" style="padding: 3rem 0 4rem;">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <div class="eyebrow"><span class="num">01</span><span>The Practice</span></div>
+        </div>
+        <div class="intro-right">
+          <h2 class="display-h intro-headline">A consultancy <em>first.</em> A supplier second.</h2>
+          <p class="intro-body">We do not sell luminaires. We design the way light meets a room. Working alongside architects, interior designers and project owners, we translate intent into specification.</p>
+          <div class="intro-meta" style="grid-template-columns: repeat(4,1fr);">
+            <div class="item"><span class="num">36+</span><span class="label">Years</span></div>
+            <div class="item"><span class="num">2000+</span><span class="label">Installations</span></div>
+            <div class="item"><span class="num">15</span><span class="label">Brand Partners</span></div>
+            <div class="item"><span class="num">50</span><span class="label">Cities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="opt-wrap opt2">
+  <div class="opt-label">Option 2 — compact grouped header, top-anchored, rest left quiet</div>
+  <section class="intro" style="padding: 3rem 0 4rem;">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <div class="eyebrow"><span class="num">01</span><span>The Practice</span></div>
+          <div class="intro-aside">
+            <span class="stat">36<em style="font-style:italic;color:var(--gold)">+</em></span>
+            <p>Years of curating lighting solutions across the breadth of Indian architecture.</p>
+          </div>
+        </div>
+        <div class="intro-right">
+          <h2 class="display-h intro-headline">A consultancy <em>first.</em> A supplier second.</h2>
+          <p class="intro-body">We do not sell luminaires. We design the way light meets a room. Working alongside architects, interior designers and project owners, we translate intent into specification.</p>
+          <div class="intro-meta">
+            <div class="item"><span class="num">2000+</span><span class="label">Installations</span></div>
+            <div class="item"><span class="num">15</span><span class="label">Brand Partners</span></div>
+            <div class="item"><span class="num">50</span><span class="label">Cities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="opt-wrap opt3">
+  <div class="opt-label">Option 3 — oversized numeral as a vertical anchor</div>
+  <section class="intro" style="padding: 3rem 0 4rem;">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <div class="eyebrow"><span class="num">01</span><span>The Practice</span></div>
+          <div class="intro-aside">
+            <span class="stat">36+</span>
+            <p>Years of curating lighting solutions across Indian architecture.</p>
+          </div>
+        </div>
+        <div class="intro-right">
+          <h2 class="display-h intro-headline">A consultancy <em>first.</em> A supplier second.</h2>
+          <p class="intro-body">We do not sell luminaires. We design the way light meets a room. Working alongside architects, interior designers and project owners, we translate intent into specification.</p>
+          <div class="intro-meta">
+            <div class="item"><span class="num">2000+</span><span class="label">Installations</span></div>
+            <div class="item"><span class="num">15</span><span class="label">Brand Partners</span></div>
+            <div class="item"><span class="num">50</span><span class="label">Cities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
