@@ -515,7 +515,6 @@ section {
   line-height: 1.65;
   color: rgba(14,14,12,0.65);
   margin-bottom: 2rem;
-  max-width: 440px;
 }
 
 .project-meta {
@@ -524,7 +523,6 @@ section {
   margin-bottom: 2.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--rule);
-  max-width: 440px;
 }
 
 .project-meta .item {
