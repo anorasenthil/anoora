@@ -186,7 +186,7 @@
 
   <!-- Router and Data Binding -->
   <script>
-    // Project Dataset (7 Authentic Projects)
+    // Project Dataset (8 Projects)
     const projectData = {
       'smart-city': {
         title: 'Smart City',
@@ -285,6 +285,20 @@
         mainImage: 'resources/darza.jpg',
         narrativeHeading: 'Sophisticated <em>Calm.</em>',
         narrativeBody: '<p>Set against the backdrop of the Sanjeevani mountain peaks, Darza Resorts combines sleek modern Scandinavian design with lush natural landscapes. The resort\'s design features private pools, oxygen-rich lawns, and ancient trees.</p><p>Our lighting brief focused on highlighting the clean lines of the villas and the surrounding canopy of trees, creating a sophisticated, tranquil evening atmosphere across the private villas, open-air dining spaces, and expansive lawns.</p>'
+      },
+      'cotton-city': {
+        title: 'Cotton City',
+        italicTitle: 'Coimbatore',
+        breadcrumb: 'Anoora / Commercial',
+        lead: 'Architectural facade and ambient landscape lighting designed for the Cotton City landmark.',
+        location: 'Coimbatore, Tamil Nadu',
+        category: 'Commercial',
+        year: '2025',
+        client: 'Cotton City Developers',
+        lighting: 'Architectural LED & Landscape Accents',
+        mainImage: 'resources/cotton-city/0M9A9254.jpg',
+        narrativeHeading: 'Architectural <em>Luminescence.</em>',
+        narrativeBody: '<p>Cotton City is a modern landmark development in Coimbatore. Our lighting brief focused on highlighting the building\'s architectural geometry and creating an inviting, sophisticated ambient atmosphere across the surrounding outdoor plazas and entryways.</p><p>We specified narrow-beam warm-white architectural grazer fixtures combined with subtle landscape uplighters, creating a seamless visual transition from the streetscape to the building interior.</p>'
       }
     };
 
@@ -337,7 +351,7 @@
         mainSlot.setAttribute('src', project.mainImage);
       }
 
-      // Pagination Links (Loop across 7 active projects)
+      // Pagination Links (Loop across active projects)
       const projectIds = Object.keys(projectData);
       const index = projectIds.indexOf(projectId);
       const prevIndex = (index - 1 + projectIds.length) % projectIds.length;
