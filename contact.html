@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in Touch — Anoora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav nav-always-dark" id="nav" style="padding: 20px 48px">
+    <a href="index.html" class="nav-brand" aria-label="Anoora — Home">
+      <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 24px">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#practice">Practice</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#voices">Voices</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">
+      Get in Touch
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="contact-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Anoora</a> &nbsp;/&nbsp; <span>Get in Touch</span>
+      </div>
+      <h1 class="display-h">Tell us about <em>the room.</em></h1>
+      <p class="lede">Whether you have drawings ready, or just a feeling for a space — we'd like to hear from you. Most projects begin with a conversation, and a site visit shortly after.</p>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <section class="container contact-main">
+    <!-- Form -->
+    <div class="form-section">
+      <div class="eyebrow"><span class="num">01</span><span>Enquire</span></div>
+      <h2 class="display-h">Send us a brief.</h2>
+
+      <div class="success" id="success">✓ Thank you. We've received your enquiry and will be in touch within two working days.</div>
+
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">Full name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <input type="tel" id="phone" name="phone" placeholder=" ">
+            <label for="phone">Phone (optional)</label>
+          </div>
+          <div class="field">
+            <select id="type" name="type" required>
+              <option value=""></option>
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+              <option value="industrial">Industrial</option>
+              <option value="hospitality">Hospitality</option>
+              <option value="civic">Civic / Government</option>
+              <option value="other">Other</option>
+            </select>
+            <label for="type">Project type</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" id="location" name="location" placeholder=" ">
+          <label for="location">Project location (city)</label>
+        </div>
+
+        <div class="field">
+          <textarea id="message" name="message" placeholder=" " required></textarea>
+          <label for="message">Tell us about the project</label>
+        </div>
+
+        <button type="submit" class="submit">
+          Send Enquiry
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Info -->
+    <aside class="info-section">
+      <div class="info-block">
+        <span class="label">— Call</span>
+        <p class="value"><a href="tel:+919842033144">+91 98420 33144</a></p>
+        <p class="desc">Available Monday through Friday, 9 AM to 6 PM IST.</p>
+      </div>
+
+      <div class="info-block">
+        <span class="label">— Write</span>
+        <p class="value"><a href="mailto:info@anoora.in">info@anoora.in</a></p>
+        <p class="desc">We respond to every email within one working day.</p>
+      </div>
+
+      <div class="info-block">
+        <span class="label">— Visit</span>
+        <p class="value">A-44, Sampath Nagar<br>Erode, Tamil Nadu</p>
+        <p class="desc">By appointment. Coffee on us.</p>
+      </div>
+
+      <div class="info-block">
+        <span class="label">— Hours</span>
+        <ul class="hours">
+          <li><span class="day">Mon — Fri</span><span>9:00 — 18:00</span></li>
+          <li><span class="day">Saturday</span><span>9:00 — 13:00</span></li>
+          <li><span class="day">Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Map -->
+  <section class="container map-section">
+    <div class="map-head">
+      <h2 class="display-h">Find <em>the studio.</em></h2>
+      <p>We're at the heart of Erode's textile district — a short drive from Coimbatore airport.</p>
+    </div>
+    <div class="map-frame">
+      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=2000&q=85&auto=format&fit=crop" alt="Studio location aerial view">
+      <div class="map-pin">
+        <div class="dot"></div>
+        <div class="label">Anoora Studio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 36px; margin-bottom: 1rem;">
+          <p>Anoora Energy Concept Pvt Ltd. Lighting consultants and suppliers, working across India since 1988.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="index.html#practice">Practice</a>
+          <a href="index.html#work">Selected Work</a>
+          <a href="projects.html">Project Archive</a>
+          <a href="index.html#voices">Voices</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="#">Residential</a>
+          <a href="#">Commercial</a>
+          <a href="#">Industrial</a>
+          <a href="#">Civic</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>A-44, Sampath Nagar<br>Erode, Tamil Nadu</p>
+          <a href="tel:+919842033144">+91 98420 33144</a>
+          <a href="mailto:info@anoora.in">info@anoora.in</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Anoora Energy Concept Pvt Ltd.</span>
+        <span>Site designed with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll behavior (matches projects.html)
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 80) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Contact form (no backend — just confirms receipt client-side)
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('success');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      success.classList.add('show');
+      form.reset();
+      setTimeout(() => success.classList.remove('show'), 6000);
+    });
+  </script>
+</body>
+</html>

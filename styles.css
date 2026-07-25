@@ -1302,4 +1302,300 @@ footer {
   }
 }
 
+/* ========= CONTACT PAGE ========= */
+.contact-hero {
+  padding: 8rem 0 4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.breadcrumb {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(14, 14, 12, 0.5);
+  margin-bottom: 3rem;
+}
+.breadcrumb a { color: var(--ink); text-decoration: none; }
+
+.contact-hero h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  max-width: 14ch;
+}
+
+.contact-hero .lede {
+  margin-top: 2.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: rgba(14, 14, 12, 0.65);
+  max-width: 540px;
+}
+
+.contact-main {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6rem;
+}
+
+.form-section .eyebrow { margin-bottom: 2rem; }
+
+.form-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.field label {
+  position: absolute;
+  top: 0; left: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(14, 14, 12, 0.5);
+  transition: color 200ms;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 1.75rem 0 0.75rem 0;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  outline: none;
+  transition: border-color 300ms;
+}
+
+.field textarea {
+  min-height: 140px;
+  resize: vertical;
+  padding-top: 2rem;
+}
+
+.field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%230E0E0C' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 2rem;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: var(--gold);
+}
+
+.field input:focus + label,
+.field textarea:focus + label,
+.field select:focus + label {
+  color: var(--gold);
+}
+
+.submit {
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 1.25rem 2.5rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 250ms;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submit:hover {
+  background: var(--gold);
+  gap: 1.5rem;
+}
+
+.submit svg { width: 16px; height: 16px; }
+
+.success {
+  display: none;
+  padding: 1.25rem 1.5rem;
+  background: rgba(31, 138, 91, 0.08);
+  border-left: 3px solid #1F8A5B;
+  color: #1F8A5B;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.success.show {
+  display: block;
+  animation: successIn 0.4s ease;
+}
+
+@keyframes successIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-section {
+  padding-top: 2rem;
+}
+
+.info-block {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.info-block:last-child {
+  border-bottom: none;
+}
+
+.info-block .label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.info-block .value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.info-block .value a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms;
+}
+
+.info-block .value a:hover {
+  border-bottom-color: var(--gold);
+}
+
+.info-block .desc {
+  font-size: 0.9rem;
+  color: rgba(14, 14, 12, 0.6);
+  line-height: 1.6;
+}
+
+.hours {
+  list-style: none;
+  font-size: 0.95rem;
+  color: rgba(14, 14, 12, 0.75);
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--rule-soft);
+}
+
+.hours li:last-child { border: none; }
+
+.hours .day { letter-spacing: 0.04em; }
+
+.map-section {
+  padding: 4rem 0 8rem;
+  border-top: 1px solid var(--rule);
+}
+
+.map-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 3rem;
+}
+
+.map-head h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.map-head p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(14, 14, 12, 0.6);
+  max-width: 400px;
+  justify-self: end;
+}
+
+.map-frame {
+  aspect-ratio: 21 / 9;
+  background: var(--paper-warm);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--rule);
+}
+
+.map-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.4) contrast(0.95);
+}
+
+.map-pin {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.map-pin .dot {
+  width: 14px; height: 14px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(194, 138, 58, 0.2), 0 0 0 14px rgba(194, 138, 58, 0.08);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(194, 138, 58, 0.2), 0 0 0 14px rgba(194, 138, 58, 0.08); }
+  50% { box-shadow: 0 0 0 10px rgba(194, 138, 58, 0.3), 0 0 0 22px rgba(194, 138, 58, 0.12); }
+}
+
+.map-pin .label {
+  background: var(--ink);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+@media (max-width: 968px) {
+  .contact-hero { padding: 4rem 0 2rem; }
+  .contact-main { padding: 4rem 0; grid-template-columns: 1fr; gap: 4rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .map-head { grid-template-columns: 1fr; gap: 1.5rem; }
+  .map-head p { justify-self: start; }
+  .map-frame { aspect-ratio: 4/3; }
+}
 
