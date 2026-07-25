@@ -97,17 +97,23 @@
     </div>
   </section>
 
-  <!-- Interactive Detail Gallery -->
+  <!-- Interactive Detail Gallery Carousel -->
   <section class="project-detail-gallery-section">
     <div class="container">
-      <div class="eyebrow" style="margin-bottom: 3rem; color: rgba(14,14,12,0.5);"><span class="num">02</span><span>Gallery</span></div>
-      <div class="project-detail-gallery-grid">
-        <div class="project-detail-gallery-item">
-          <image-slot id="gallery-slot-1" shape="rounded" radius="8" placeholder="Drop gallery detail image" style="width:100%;height:100%;"></image-slot>
+      <div class="gallery-header">
+        <div class="eyebrow" style="color: rgba(14,14,12,0.5); margin-bottom: 0;"><span class="num">02</span><span>Gallery</span></div>
+        <div class="gallery-controls">
+          <span class="gallery-count" id="gallery-counter">1 / 1</span>
+          <button class="gallery-arrow prev" id="gallery-prev" aria-label="Previous image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="gallery-arrow next" id="gallery-next" aria-label="Next image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
         </div>
-        <div class="project-detail-gallery-item">
-          <image-slot id="gallery-slot-2" shape="rounded" radius="8" placeholder="Drop gallery detail image" style="width:100%;height:100%;"></image-slot>
-        </div>
+      </div>
+      <div class="gallery-scroll-container" id="gallery-scroll-container">
+        <!-- Dynamically populated scroll slides -->
       </div>
     </div>
   </section>
@@ -199,6 +205,9 @@
         client: 'Coimbatore Smart City Mission',
         lighting: 'Philips · K-Lite · Schréder',
         mainImage: 'resources/selvachinthamani/smart-city.jpg',
+        galleryImages: [
+          'resources/selvachinthamani/smart-city.jpg'
+        ],
         narrativeHeading: 'The Waterfront <em>Brief.</em>',
         narrativeBody: '<p>Coimbatore entered the Government of India\'s Smart Cities Mission in January 2016, with lake eco-restoration, mobility, and public infrastructure at its core. We executed a ₹5–6 crore lighting scheme across the city\'s ancient interconnected lakes, turning them into vibrant civic spaces.</p><p>At Race Course and the lakeside promenades, we specified RGB colour-changing systems and distinct walkway lighting to balance public safety with high-end aesthetic appeal. The result is a 100% LED design that sets a benchmark for civic lighting across India.</p>'
       },
@@ -213,6 +222,9 @@
         client: 'Coimbatore Smart City Mission',
         lighting: 'K-Lite Specialist Uplighters',
         mainImage: 'resources/statue.jpg',
+        galleryImages: [
+          'resources/statue.jpg'
+        ],
         narrativeHeading: 'Writing in <em>Light.</em>',
         narrativeBody: '<p>This flagship installation of the Coimbatore Smart City Mission is a 20–25 ft stainless-steel figure built entirely from 1,330 interlaced Tamil letters — representing every Kural written by the poet Thiruvalluvar.</p><p>With natural gaps between each letter, the brief was to keep the form and script crystal clear at night without glare. We mounted K-Lite uplighters at calculated angles on all four sides, concealed within the sculpture itself, so the letters now read even more clearly after dark than in daylight.</p>'
       },
@@ -227,8 +239,11 @@
         client: 'Public Works Department',
         lighting: 'Roadway + Architectural RGB',
         mainImage: 'resources/gd-naidu-bridge/gd-naidu-1.jpg',
-        galleryImage1: 'resources/gd-naidu-bridge/gd-naidu-2.jpg',
-        galleryImage2: 'resources/gd-naidu-bridge/gd-naidu-3.webp',
+        galleryImages: [
+          'resources/gd-naidu-bridge/gd-naidu-1.jpg',
+          'resources/gd-naidu-bridge/gd-naidu-2.jpg',
+          'resources/gd-naidu-bridge/gd-naidu-3.webp'
+        ],
         narrativeHeading: 'Artery of the <em>City.</em>',
         narrativeBody: '<p>The G.D. Naidu Bridge runs along Avinashi Road, one of Coimbatore\'s primary urban arteries. It connects key commercial, residential, and industrial zones.</p><p>Our design provides high-uniformity, low-glare roadway illumination for high-speed traffic, combined with custom-controlled RGB architectural accents along the bridge support pillars, creating a dignified landmark status in the city nightscape.</p><p style="font-size:0.85rem;opacity:0.7;margin-top:1rem;"><em>Photo source attribution: The Hindu</em></p>'
       },
@@ -243,6 +258,9 @@
         client: 'Public Works Department (Heritage Division)',
         lighting: 'Warm Spotlights & Accents',
         mainImage: 'resources/horse-court.jpg',
+        galleryImages: [
+          'resources/horse-court.jpg'
+        ],
         narrativeHeading: 'Resurrecting <em>Ruins.</em>',
         narrativeBody: '<p>Coimbatore\'s Kuthirai Vandi Court, a British-era building once used for horse cart regulation, had fallen into complete disuse before being taken up for heritage renovation by the PWD.</p><p>Resurrected from ruins, the building demanded a sensitive lighting scheme. We specified warm-white narrow-beam spots to accentuate the masonry columns and deep eaves, honoring the historical character of this brick-and-lime structure without modern distraction.</p>'
       },
@@ -257,6 +275,7 @@
         client: 'Makino India',
         lighting: 'High-Bay LED Fixtures',
         mainImage: '',
+        galleryImages: [],
         narrativeHeading: 'Precision & <em>Safety.</em>',
         narrativeBody: '<p>Industrial lighting demands extreme durability, uniform lux distribution, and glare control to ensure worker safety. Our proposed design for the Makino facility focuses on energy-efficient high-bay fixtures that reduce shadow areas on the production floor.</p><p>The system is fully compatible with intelligent dimming controls that respond to ambient natural light, delivering optimal visibility while minimizing energy footprint.</p>'
       },
@@ -271,6 +290,7 @@
         client: 'Unnamalai Promoters',
         lighting: 'Keselec Schréder & Philips',
         mainImage: '',
+        galleryImages: [],
         narrativeHeading: 'Township <em>Infrastructure.</em>',
         narrativeBody: '<p>A 250-acre private township in Neelambur, developed by Unnamalai Promoters. The brief demanded a world-class street and common area lighting layout comparable to international airport standards.</p><p>We worked with Keselec Schréder on lux calculations and specified around 650 conical poles across the layout. We are also completing a 15-metre media tower with imported Philips fixtures from the Netherlands, plus the full indoor and outdoor lighting for the project\'s offices.</p>'
       },
@@ -284,7 +304,15 @@
         year: '2024',
         client: 'Darza Luxury Resorts',
         lighting: 'Landscape & Villa Accents',
-        mainImage: 'resources/darza.jpg',
+        mainImage: 'resources/darza-resort/darza-1.jpg',
+        galleryImages: [
+          'resources/darza-resort/darza-1.jpg',
+          'resources/darza-resort/darza-2.jpg',
+          'resources/darza-resort/darza-3.jpg',
+          'resources/darza-resort/darza-4.jpg',
+          'resources/darza-resort/darza-5.jpg',
+          'resources/darza-resort/darza-6.jpg'
+        ],
         narrativeHeading: 'Sophisticated <em>Calm.</em>',
         narrativeBody: '<p>Set against the backdrop of the Sanjeevani mountain peaks, Darza Resorts combines sleek modern Scandinavian design with lush natural landscapes. The resort\'s design features private pools, oxygen-rich lawns, and ancient trees.</p><p>Our lighting brief focused on highlighting the clean lines of the villas and the surrounding canopy of trees, creating a sophisticated, tranquil evening atmosphere across the private villas, open-air dining spaces, and expansive lawns.</p>'
       },
@@ -299,8 +327,23 @@
         client: 'Cotton City Developers',
         lighting: 'Architectural LED & Landscape Accents',
         mainImage: 'resources/cotton-city/0M9A9254.jpg',
-        galleryImage1: 'resources/cotton-city/0M9A9255.jpg',
-        galleryImage2: 'resources/cotton-city/0M9A9256.jpg',
+        galleryImages: [
+          'resources/cotton-city/0M9A9254.jpg',
+          'resources/cotton-city/0M9A9255.jpg',
+          'resources/cotton-city/0M9A9256.jpg',
+          'resources/cotton-city/0M9A9257.jpg',
+          'resources/cotton-city/0M9A9258.jpg',
+          'resources/cotton-city/0M9A9260.jpg',
+          'resources/cotton-city/0M9A9261.jpg',
+          'resources/cotton-city/0M9A9262.jpg',
+          'resources/cotton-city/0M9A9264.jpg',
+          'resources/cotton-city/0M9A9266.jpg',
+          'resources/cotton-city/0M9A9268.jpg',
+          'resources/cotton-city/0M9A9269.jpg',
+          'resources/cotton-city/0M9A9270.jpg',
+          'resources/cotton-city/0M9A9271.jpg',
+          'resources/cotton-city/0M9A9272.jpg'
+        ],
         narrativeHeading: 'Architectural <em>Luminescence.</em>',
         narrativeBody: '<p>Cotton City is a modern landmark development in Coimbatore. Our lighting brief focused on highlighting the building\'s architectural geometry and creating an inviting, sophisticated ambient atmosphere across the surrounding outdoor plazas and entryways.</p><p>We specified narrow-beam warm-white architectural grazer fixtures combined with subtle landscape uplighters, creating a seamless visual transition from the streetscape to the building interior.</p>'
       }
@@ -342,23 +385,52 @@
       document.getElementById('narrative-heading').innerHTML = project.narrativeHeading;
       document.getElementById('narrative-body').innerHTML = project.narrativeBody;
 
-      // Update Interactive Slots IDs
+      // Main Hero Image Slot
       const mainSlot = document.getElementById('main-project-slot');
-      const gallerySlot1 = document.getElementById('gallery-slot-1');
-      const gallerySlot2 = document.getElementById('gallery-slot-2');
-
       mainSlot.setAttribute('id', `project-${projectId}-main`);
-      gallerySlot1.setAttribute('id', `project-${projectId}-gallery-1`);
-      gallerySlot2.setAttribute('id', `project-${projectId}-gallery-2`);
-
       if (project.mainImage) {
         mainSlot.setAttribute('src', project.mainImage);
       }
-      if (project.galleryImage1) {
-        gallerySlot1.setAttribute('src', project.galleryImage1);
-      }
-      if (project.galleryImage2) {
-        gallerySlot2.setAttribute('src', project.galleryImage2);
+
+      // Populate Gallery Scroll Container
+      const galleryContainer = document.getElementById('gallery-scroll-container');
+      const galleryCounter = document.getElementById('gallery-counter');
+      const prevBtn = document.getElementById('gallery-prev');
+      const nextBtn = document.getElementById('gallery-next');
+
+      const galleryImages = project.galleryImages || (project.mainImage ? [project.mainImage] : []);
+
+      if (galleryImages.length > 0) {
+        galleryContainer.innerHTML = galleryImages.map((imgSrc, i) => `
+          <div class="gallery-slide">
+            <img src="${imgSrc}" alt="${project.title} photo ${i + 1}" loading="lazy">
+          </div>
+        `).join('');
+
+        const updateControls = () => {
+          const scrollLeft = galleryContainer.scrollLeft;
+          const slideWidth = galleryContainer.firstElementChild ? galleryContainer.firstElementChild.offsetWidth + 24 : 1;
+          const currentIndex = Math.min(Math.round(scrollLeft / slideWidth) + 1, galleryImages.length);
+          galleryCounter.textContent = `${currentIndex} / ${galleryImages.length}`;
+          prevBtn.disabled = scrollLeft <= 10;
+          nextBtn.disabled = scrollLeft + galleryContainer.clientWidth >= galleryContainer.scrollWidth - 10;
+        };
+
+        galleryContainer.addEventListener('scroll', updateControls, { passive: true });
+        
+        prevBtn.addEventListener('click', () => {
+          const slideWidth = galleryContainer.firstElementChild ? galleryContainer.firstElementChild.offsetWidth + 24 : 400;
+          galleryContainer.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+          const slideWidth = galleryContainer.firstElementChild ? galleryContainer.firstElementChild.offsetWidth + 24 : 400;
+          galleryContainer.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        });
+
+        updateControls();
+      } else {
+        document.querySelector('.project-detail-gallery-section').style.display = 'none';
       }
 
       // Pagination Links (Loop across active projects)

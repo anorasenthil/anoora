@@ -2061,4 +2061,109 @@ footer {
   pointer-events: none;
 }
 
+/* Horizontal Gallery Slider */
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gallery-count {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.gallery-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  background: var(--card-bg, #fff);
+  color: var(--fg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-arrow:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.gallery-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+  border-color: var(--rule);
+  color: var(--fg);
+}
+
+.gallery-scroll-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+
+.gallery-scroll-container::-webkit-scrollbar {
+  height: 4px;
+}
+.gallery-scroll-container::-webkit-scrollbar-track {
+  background: rgba(14, 14, 12, 0.05);
+  border-radius: 2px;
+}
+.gallery-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.gallery-slide {
+  flex: 0 0 650px;
+  max-width: 85vw;
+  aspect-ratio: 16 / 10;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(14, 14, 12, 0.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-slide:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .gallery-slide {
+    flex: 0 0 85vw;
+    aspect-ratio: 4 / 3;
+  }
+}
+
 
