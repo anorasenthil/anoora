@@ -227,6 +227,8 @@
         client: 'Public Works Department',
         lighting: 'Roadway + Architectural RGB',
         mainImage: 'resources/gd-naidu-bridge/gd-naidu-1.jpg',
+        galleryImage1: 'resources/gd-naidu-bridge/gd-naidu-2.jpg',
+        galleryImage2: 'resources/gd-naidu-bridge/gd-naidu-3.webp',
         narrativeHeading: 'Artery of the <em>City.</em>',
         narrativeBody: '<p>The G.D. Naidu Bridge runs along Avinashi Road, one of Coimbatore\'s primary urban arteries. It connects key commercial, residential, and industrial zones.</p><p>Our design provides high-uniformity, low-glare roadway illumination for high-speed traffic, combined with custom-controlled RGB architectural accents along the bridge support pillars, creating a dignified landmark status in the city nightscape.</p><p style="font-size:0.85rem;opacity:0.7;margin-top:1rem;"><em>Photo source attribution: The Hindu</em></p>'
       },
@@ -297,6 +299,8 @@
         client: 'Cotton City Developers',
         lighting: 'Architectural LED & Landscape Accents',
         mainImage: 'resources/cotton-city/0M9A9254.jpg',
+        galleryImage1: 'resources/cotton-city/0M9A9255.jpg',
+        galleryImage2: 'resources/cotton-city/0M9A9256.jpg',
         narrativeHeading: 'Architectural <em>Luminescence.</em>',
         narrativeBody: '<p>Cotton City is a modern landmark development in Coimbatore. Our lighting brief focused on highlighting the building\'s architectural geometry and creating an inviting, sophisticated ambient atmosphere across the surrounding outdoor plazas and entryways.</p><p>We specified narrow-beam warm-white architectural grazer fixtures combined with subtle landscape uplighters, creating a seamless visual transition from the streetscape to the building interior.</p>'
       }
@@ -349,6 +353,12 @@
 
       if (project.mainImage) {
         mainSlot.setAttribute('src', project.mainImage);
+      }
+      if (project.galleryImage1) {
+        gallerySlot1.setAttribute('src', project.galleryImage1);
+      }
+      if (project.galleryImage2) {
+        gallerySlot2.setAttribute('src', project.galleryImage2);
       }
 
       // Pagination Links (Loop across active projects)
