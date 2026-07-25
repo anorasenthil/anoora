@@ -1517,7 +1517,7 @@ footer {
 }
 
 .contact-main {
-  padding: 6rem 0;
+  padding: 6rem 3rem;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 0;
@@ -1786,7 +1786,7 @@ footer {
 
 @media (max-width: 968px) {
   .contact-hero { padding: 4rem 0 2rem; }
-  .contact-main { padding: 4rem 0; grid-template-columns: 1fr; gap: 4rem; }
+  .contact-main { padding: 4rem 1.5rem; grid-template-columns: 1fr; gap: 4rem; }
   .form-section { padding-right: 0; }
   .info-section { padding-left: 0; padding-top: 3rem; border-left: none; border-top: 1px solid var(--rule); }
   .form-row { grid-template-columns: 1fr; }
