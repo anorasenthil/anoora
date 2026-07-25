@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details — Anoora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav nav-always-dark" id="nav" style="padding: 20px 48px">
+    <a href="index.html" class="nav-brand" aria-label="Anoora — Home">
+      <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 24px">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#practice">Practice</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="projects.html" class="active">PROJECTS</a></li>
+      <li><a href="index.html#voices">Voices</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">
+      Get in Touch
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail-section">
+    <div class="container">
+      
+      <!-- Back to Archive Link -->
+      <a href="projects.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="transform: scaleX(-1);"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        Back to Archive
+      </a>
+
+      <!-- Hero Header Info -->
+      <div class="project-detail-hero-grid">
+        <div class="project-detail-title-wrap">
+          <span class="project-breadcrumb" id="project-category-breadcrumb">Anoora / Civic</span>
+          <h1 id="project-title-header">Smart City, <em>Coimbatore</em></h1>
+          <p class="project-lead" id="project-lead-desc">A major eco-restoration and public lighting project illuminating the city's ancient lakeside recreational waterfronts.</p>
+        </div>
+
+        <!-- Metadata Card -->
+        <div class="project-detail-meta-card">
+          <div class="project-detail-meta-grid">
+            <div class="project-detail-meta-item">
+              <span class="project-detail-meta-label">Location</span>
+              <span class="project-detail-meta-val" id="meta-location">Selvachinthamani Lake, Coimbatore</span>
+            </div>
+            <div class="project-detail-meta-item">
+              <span class="project-detail-meta-label">Category</span>
+              <span class="project-detail-meta-val" id="meta-category">Civic</span>
+            </div>
+            <div class="project-detail-meta-item">
+              <span class="project-detail-meta-label">Year</span>
+              <span class="project-detail-meta-val" id="meta-year">2023</span>
+            </div>
+            <div class="project-detail-meta-item">
+              <span class="project-detail-meta-label">Client</span>
+              <span class="project-detail-meta-val" id="meta-client">Coimbatore Smart City Mission</span>
+            </div>
+            <div class="project-detail-meta-item" style="grid-column: span 2;">
+              <span class="project-detail-meta-label">Lighting Fixtures</span>
+              <span class="project-detail-meta-val" id="meta-lighting">Philips · K-Lite · Schréder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Project Hero Image Slot -->
+      <div class="project-detail-main-img-wrap">
+        <image-slot id="main-project-slot" shape="rounded" radius="12" style="width:100%;height:100%;"></image-slot>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Philosophical Narrative Section -->
+  <section class="project-detail-narrative-section">
+    <div class="container">
+      <div class="project-detail-narrative-grid">
+        <div class="project-detail-narrative-left">
+          <h2 id="narrative-heading">The Considered <em>Approach.</em></h2>
+        </div>
+        <div class="project-detail-narrative-right">
+          <div class="project-story" id="narrative-body">
+            <p>Story details go here...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Detail Gallery -->
+  <section class="project-detail-gallery-section">
+    <div class="container">
+      <div class="eyebrow" style="margin-bottom: 3rem; color: rgba(14,14,12,0.5);"><span class="num">02</span><span>Gallery</span></div>
+      <div class="project-detail-gallery-grid">
+        <div class="project-detail-gallery-item">
+          <image-slot id="gallery-slot-1" shape="rounded" radius="8" placeholder="Drop gallery detail image" style="width:100%;height:100%;"></image-slot>
+        </div>
+        <div class="project-detail-gallery-item">
+          <image-slot id="gallery-slot-2" shape="rounded" radius="8" placeholder="Drop gallery detail image" style="width:100%;height:100%;"></image-slot>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Navigation Pagination -->
+  <section class="project-detail-pagination">
+    <div class="container">
+      <div class="project-detail-pagination-inner">
+        <a href="#" class="pagination-link prev" id="prev-project-link">
+          <span class="pagination-label">Previous Project</span>
+          <span class="pagination-title" id="prev-project-title">Project <em>Name</em></span>
+        </a>
+        <a href="#" class="pagination-link next" id="next-project-link">
+          <span class="pagination-label">Next Project</span>
+          <span class="pagination-title" id="next-project-title">Project <em>Name</em></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 36px; margin-bottom: 1rem;">
+          <p>Anoora Energy Concept Pvt Ltd. Lighting consultants and suppliers, working across India since 1988.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="index.html#practice">Practice</a>
+          <a href="index.html#work">Selected Work</a>
+          <a href="projects.html">Project Archive</a>
+          <a href="index.html#voices">Voices</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="#">Residential</a>
+          <a href="#">Commercial</a>
+          <a href="#">Industrial</a>
+          <a href="#">Civic</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>A-44, Sampath Nagar<br>Erode, Tamil Nadu</p>
+          <a href="tel:+919842033144">+91 98420 33144</a>
+          <a href="mailto:info@anoora.in">info@anoora.in</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Anoora Energy Concept Pvt Ltd.</span>
+        <span>Site designed with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Slot Component -->
+  <script src="image-slot.js"></script>
+
+  <!-- Router and Data Binding -->
+  <script>
+    // Project Dataset
+    const projectData = {
+      'smart-city': {
+        title: 'Smart City Coimbatore',
+        italicTitle: 'Selvachinthamani Lake',
+        breadcrumb: 'Anoora / Civic',
+        lead: 'A ₹5–6 crore eco-restoration and public lighting project illuminating the city\'s ancient lakeside recreational waterfronts.',
+        location: 'Selvachinthamani Lake, Coimbatore',
+        category: 'Civic',
+        year: '2023',
+        client: 'Coimbatore Smart City Mission',
+        lighting: 'Philips · K-Lite · Schréder',
+        mainImage: 'resources/smart-city.jpg',
+        narrativeHeading: 'The Waterfront <em>Brief.</em>',
+        narrativeBody: '<p>Coimbatore entered the Government of India\'s Smart Cities Mission in January 2016, with lake eco-restoration, mobility, and public infrastructure at its core. We executed a ₹5–6 crore lighting scheme across the city\'s ancient interconnected lakes, turning them into vibrant civic spaces.</p><p>At Race Course and the lakeside promenades, we specified RGB colour-changing systems and distinct walkway lighting to balance public safety with high-end aesthetic appeal. The result is a 100% LED design that sets a benchmark for civic lighting across India.</p>'
+      },
+      'thiruvalluvar-statue': {
+        title: 'Thiruvalluvar Statue',
+        italicTitle: 'Kurichi Lake',
+        breadcrumb: 'Anoora / Civic',
+        lead: 'Concealed uplighting for a 25 ft sculpture built entirely from 1,330 interlaced Tamil characters.',
+        location: 'Kurichi Lake, Coimbatore',
+        category: 'Civic',
+        year: '2024',
+        client: 'Coimbatore Smart City Mission',
+        lighting: 'K-Lite Specialist Uplighters',
+        mainImage: 'resources/statue.jpg',
+        narrativeHeading: 'Writing in <em>Light.</em>',
+        narrativeBody: '<p>This flagship installation of the Coimbatore Smart City Mission is a 20–25 ft stainless-steel figure built entirely from 1,330 interlaced Tamil letters — representing every Kural written by the poet Thiruvalluvar.</p><p>With natural gaps between each letter, the brief was to keep the form and script crystal clear at night without glare. We mounted K-Lite uplighters at calculated angles on all four sides, concealed within the sculpture itself, so the letters now read even more clearly after dark than in daylight.</p>'
+      },
+      'gd-naidu-bridge': {
+        title: 'G.D. Naidu Bridge',
+        italicTitle: 'Avinashi Road',
+        breadcrumb: 'Anoora / Civic',
+        lead: 'A tribute to Coimbatore\'s legendary industrialist, blending high-performance roadway safety with subtle architectural color.',
+        location: 'Avinashi Road, Coimbatore',
+        category: 'Civic',
+        year: '2025',
+        client: 'Public Works Department',
+        lighting: 'Roadway + Architectural RGB',
+        mainImage: '',
+        narrativeHeading: 'Artery of the <em>City.</em>',
+        narrativeBody: '<p>The G.D. Naidu Bridge runs along Avinashi Road, one of Coimbatore\'s primary urban arteries. It connects key commercial, residential, and industrial zones.</p><p>Our design provides high-uniformity, low-glare roadway illumination for high-speed traffic, combined with custom-controlled RGB architectural accents along the bridge support pillars, creating a dignified landmark status in the city nightscape.</p>'
+      },
+      'horse-court': {
+        title: 'Horse Court Area',
+        italicTitle: 'Avinashi Road',
+        breadcrumb: 'Anoora / Civic',
+        lead: 'Dignified landscape and architectural restoration lighting for a handsome British-era heritage building.',
+        location: 'Avinashi Road, Coimbatore',
+        category: 'Civic',
+        year: '2024',
+        client: 'Public Works Department (Heritage Division)',
+        lighting: 'Warm Spotlights & Accents',
+        mainImage: 'resources/horse-court.jpg',
+        narrativeHeading: 'Resurrecting <em>Ruins.</em>',
+        narrativeBody: '<p>Coimbatore\'s Kuthirai Vandi Court, a British-era building once used for horse cart regulation, had fallen into complete disuse before being taken up for heritage renovation by the PWD.</p><p>Resurrected from ruins, the building demanded a sensitive lighting scheme. We specified warm-white narrow-beam spots to accentuate the masonry columns and deep eaves, honoring the historical character of this brick-and-lime structure without modern distraction.</p>'
+      },
+      'makino': {
+        title: 'Makino Office & Factory',
+        italicTitle: 'Industrial Facility',
+        breadcrumb: 'Anoora / Industrial',
+        lead: 'A high-performance industrial lighting solution maximizing productivity, safety, and energy efficiency.',
+        location: 'Industrial Park, Coimbatore',
+        category: 'Industrial',
+        year: 'Planned',
+        client: 'Makino India',
+        lighting: 'High-Bay LED Fixtures',
+        mainImage: '',
+        narrativeHeading: 'Precision & <em>Safety.</em>',
+        narrativeBody: '<p>Industrial lighting demands extreme durability, uniform lux distribution, and glare control to ensure worker safety. Our proposed design for the Makino facility focuses on energy-efficient high-bay fixtures that reduce shadow areas on the production floor.</p><p>The system is fully compatible with intelligent dimming controls that respond to ambient natural light, delivering optimal visibility while minimizing energy footprint.</p>'
+      },
+      'karthipuram': {
+        title: 'Karthipuram Township',
+        italicTitle: 'Neelambur',
+        breadcrumb: 'Anoora / Commercial',
+        lead: 'A massive ₹2.5 crore private township lighting scheme with 650 custom poles and a 15-metre media tower.',
+        location: 'Neelambur, Coimbatore',
+        category: 'Commercial',
+        year: '2025',
+        client: 'Unnamalai Promoters',
+        lighting: 'Keselec Schréder & Philips',
+        mainImage: '',
+        narrativeHeading: 'Township <em>Infrastructure.</em>',
+        narrativeBody: '<p>A 250-acre private township in Neelambur, developed by Unnamalai Promoters. The brief demanded a world-class street and common area lighting layout comparable to international airport standards.</p><p>We worked with Keselec Schréder on lux calculations and specified around 650 conical poles across the layout. We are also completing a 15-metre media tower with imported Philips fixtures from the Netherlands, plus the full indoor and outdoor lighting for the project\'s offices.</p>'
+      },
+      'darza-resort': {
+        title: 'Darza Luxury Resort',
+        italicTitle: 'Coimbatore',
+        breadcrumb: 'Anoora / Hospitality',
+        lead: 'Modern Scandinavian landscape and private pool villa lighting set against the Sanjeevani mountain peaks.',
+        location: 'Nanjundapuram, Coimbatore',
+        category: 'Hospitality',
+        year: '2024',
+        client: 'Darza Luxury Resorts',
+        lighting: 'Landscape & Villa Accents',
+        mainImage: 'resources/darza.jpg',
+        narrativeHeading: 'Sophisticated <em>Calm.</em>',
+        narrativeBody: '<p>Set against the backdrop of the Sanjeevani mountain peaks, Darza Resorts combines sleek modern Scandinavian design with lush natural landscapes. The resort\'s design features private pools, oxygen-rich lawns, and ancient trees.</p><p>Our lighting brief focused on highlighting the clean lines of the villas and the surrounding canopy of trees, creating a sophisticated, tranquil evening atmosphere across the private villas, open-air dining spaces, and expansive lawns.</p>'
+      },
+      'maple-house': {
+        title: 'The Maple House',
+        italicTitle: 'Coimbatore',
+        breadcrumb: 'Anoora / Residential',
+        lead: 'Layered, intimate illumination across a premium 9,000 sq ft private villa.',
+        location: 'Race Course, Coimbatore',
+        category: 'Residential',
+        year: '2024',
+        client: 'Private Residence',
+        lighting: 'Warm Tunable Indoor & Accent',
+        mainImage: '',
+        narrativeHeading: 'Intimate <em>Sanctuary.</em>',
+        narrativeBody: '<p>The Maple House is a 9,000 sq ft residential villa designed to serve as a private sanctuary. The lighting follows the circadian rhythm, with warm tunable LEDs that transition from crisp light in the morning to soft amber in the evening.</p><p>Accent lights highlight the customized wood panels and curated interior art, ensuring that shadow and light interact to shape a cozy and inviting atmosphere.</p>'
+      },
+      'veriah-tower': {
+        title: 'Veriah Tower',
+        italicTitle: 'Bengaluru',
+        breadcrumb: 'Anoora / Commercial',
+        lead: 'Circadian-tuned lighting across four corporate floors, optimizing productivity and wellness.',
+        location: 'MG Road, Bengaluru',
+        category: 'Commercial',
+        year: '2024',
+        client: 'Veriah Corp',
+        lighting: 'Tunable White Office Fixtures',
+        mainImage: '',
+        narrativeHeading: 'Circadian <em>Workspace.</em>',
+        narrativeBody: '<p>Our brief for Veriah Tower was to design lighting for four corporate floors with employee wellness as the guiding principle. We implemented a fully automated circadian system that adjusts color temperature and brightness throughout the day.</p><p>This smart control system reduces glare on computer screens and mimics natural daylight, significantly improving productivity and focus in the workplace.</p>'
+      },
+      'oasis-villa': {
+        title: 'The Oasis Villa',
+        italicTitle: 'Erode',
+        breadcrumb: 'Anoora / Residential',
+        lead: 'Minimalist interior lighting and hidden cove details for a contemporary private residence.',
+        location: 'Erode, Tamil Nadu',
+        category: 'Residential',
+        year: '2025',
+        client: 'Private Client',
+        lighting: 'Custom Linear Coves & Spots',
+        mainImage: '',
+        narrativeHeading: 'Hidden <em>Luminescence.</em>',
+        narrativeBody: '<p>The Oasis Villa is a study in minimalist contemporary residential design. To honor the architectural intent of clean plaster walls and frameless details, we hid all lighting fixtures in customized linear plaster coves.</p><p>Narrow-beam ceiling spotlights provide accent highlights on surfaces, while diffuse indirect linear coves wash the ceilings, creating a floating effect and the illusion of expanded spatial height.</p>'
+      },
+      'textile-plaza': {
+        title: 'Textile Plaza',
+        italicTitle: 'Surat',
+        breadcrumb: 'Anoora / Commercial',
+        lead: 'Dynamic facade illumination and architectural highlights for a modern commercial landmark.',
+        location: 'Surat, Gujarat',
+        category: 'Commercial',
+        year: '2024',
+        client: 'Surat Commercial Union',
+        lighting: 'RGB Facade & Canopy Fixtures',
+        mainImage: '',
+        narrativeHeading: 'Surat Commercial <em>Icon.</em>',
+        narrativeBody: '<p>Textile Plaza is a major commercial trading hub in Surat. The goal was to give the building a striking night presence that attracts visitors while maintaining low energy consumption.</p><p>We specified narrow-profile RGB linear facade fixtures that graze the louvred metal screens, controlled by a DMX driver to program slow-shifting color patterns during festivals and corporate events.</p>'
+      },
+      'elgi-factory': {
+        title: 'Elgi Ultra Factory',
+        italicTitle: 'Coimbatore',
+        breadcrumb: 'Anoora / Industrial',
+        lead: 'Energy-efficient high-bay lighting design optimizing safety and visibility on the production floor.',
+        location: 'Peelamedu, Coimbatore',
+        category: 'Industrial',
+        year: '2023',
+        client: 'Elgi Ultra Industries',
+        lighting: 'IP65 Industrial High-Bays',
+        mainImage: '',
+        narrativeHeading: 'High-Bay <em>Optimization.</em>',
+        narrativeBody: '<p>Industrial manufacturing halls present high ceiling heights and dusty environments that require robust, dust-tight (IP65) fixtures with high-output performance.</p><p>We carried out complete dialux calculations to optimize the spacing and angle of the high-bay LED units, achieving a uniform 300-lux output across the machinery floor, boosting employee safety and manufacturing accuracy.</p>'
+      }
+    };
+
+    // DOM Population Script
+    document.addEventListener('DOMContentLoaded', () => {
+      // Nav scroll behavior
+      const nav = document.getElementById('nav');
+      const onScroll = () => {
+        if (window.scrollY > 80) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Read URL Parameter
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get('id') || 'smart-city';
+      
+      const project = projectData[projectId];
+      if (!project) {
+        window.location.href = 'projects.html'; // Fallback to archive
+        return;
+      }
+
+      // Populate DOM elements
+      document.title = `${project.title} — Anoora`;
+      document.getElementById('project-category-breadcrumb').textContent = project.breadcrumb;
+      document.getElementById('project-title-header').innerHTML = `${project.title}, <em>${project.italicTitle}</em>`;
+      document.getElementById('project-lead-desc').textContent = project.lead;
+
+      document.getElementById('meta-location').textContent = project.location;
+      document.getElementById('meta-category').textContent = project.category;
+      document.getElementById('meta-year').textContent = project.year;
+      document.getElementById('meta-client').textContent = project.client;
+      document.getElementById('meta-lighting').textContent = project.lighting;
+
+      document.getElementById('narrative-heading').innerHTML = project.narrativeHeading;
+      document.getElementById('narrative-body').innerHTML = project.narrativeBody;
+
+      // Update Interactive Slots IDs (binds data slots to local store key)
+      const mainSlot = document.getElementById('main-project-slot');
+      const gallerySlot1 = document.getElementById('gallery-slot-1');
+      const gallerySlot2 = document.getElementById('gallery-slot-2');
+
+      mainSlot.setAttribute('id', `project-${projectId}-main`);
+      gallerySlot1.setAttribute('id', `project-${projectId}-gallery-1`);
+      gallerySlot2.setAttribute('id', `project-${projectId}-gallery-2`);
+
+      // Set fallback/initial images for projects that have them in resources
+      if (project.mainImage) {
+        mainSlot.setAttribute('src', project.mainImage);
+      }
+
+      // Pagination Links
+      const projectIds = Object.keys(projectData);
+      const index = projectIds.indexOf(projectId);
+      const prevIndex = (index - 1 + projectIds.length) % projectIds.length;
+      const nextIndex = (index + 1) % projectIds.length;
+
+      const prevProject = projectData[projectIds[prevIndex]];
+      const nextProject = projectData[projectIds[nextIndex]];
+
+      const prevLink = document.getElementById('prev-project-link');
+      const nextLink = document.getElementById('next-project-link');
+
+      prevLink.setAttribute('href', `project-detail.html?id=${projectIds[prevIndex]}`);
+      nextLink.setAttribute('href', `project-detail.html?id=${projectIds[nextIndex]}`);
+
+      document.getElementById('prev-project-title').innerHTML = `${prevProject.title} <em>${prevProject.italicTitle}</em>`;
+      document.getElementById('next-project-title').innerHTML = `${nextProject.title} <em>${nextProject.italicTitle}</em>`;
+    });
+  </script>
+</body>
+</html>
