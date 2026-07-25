@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Archive — Anoora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav nav-always-dark" id="nav" style="padding: 20px 48px">
+    <a href="index.html" class="nav-brand" aria-label="Anoora — Home">
+      <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 24px">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#practice">Practice</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="projects.html" class="active">PROJECTS</a></li>
+      <li><a href="index.html#voices">Voices</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">
+      Get in Touch
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </nav>
+
+  <!-- Archive Hero -->
+  <section class="archive-hero">
+    <div class="container">
+      <div class="archive-hero-grid">
+        <div class="archive-hero-left">
+          <div class="eyebrow">Anoora / Project Archive</div>
+          <h1>An archive of <em>quiet light.</em></h1>
+        </div>
+        <div class="archive-hero-right">
+          <p>Twelve recent projects from the past four years — a fraction of three decades of installations, but a fair portrait of how we work today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Filter Bar -->
+  <div class="filter-bar" id="filter-bar">
+    <div class="container">
+      <div class="filter-bar-inner">
+        <span class="filter-label">Filter</span>
+        <ul class="filter-categories">
+          <li><button class="filter-btn active" data-filter="all">All</button></li>
+          <li><button class="filter-btn" data-filter="residential">Residential</button></li>
+          <li><button class="filter-btn" data-filter="commercial">Commercial</button></li>
+          <li><button class="filter-btn" data-filter="industrial">Industrial</button></li>
+          <li><button class="filter-btn" data-filter="hospitality">Hospitality</button></li>
+          <li><button class="filter-btn" data-filter="civic">Civic</button></li>
+        </ul>
+        <span class="filter-counter">Showing <span id="showing-count">12</span> of 12</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Archive Grid Section -->
+  <section class="archive-grid-section">
+    <div class="container">
+      <div class="grid" id="project-grid">
+        
+        <!-- Project 1 (Civic) -->
+        <article class="archive-card" data-category="civic">
+          <div class="archive-card-img">
+            <image-slot id="project-01" src="resources/smart-city.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Smart City Coimbatore, <em>Selvachinthamani Lake</em></h3>
+            </div>
+            <div class="archive-card-cat">Civic</div>
+          </div>
+          <p>We are the primary lighting consultant and supplier for the Coimbatore Smart City Coimbatore. We have worked closely with Coimbatore Contractors to bring out the beauty of the spaces through a careful selection of quality lighting fixtures.</p>
+        </article>
+
+        <!-- Project 2 (Civic) -->
+        <article class="archive-card" data-category="civic">
+          <div class="archive-card-img">
+            <image-slot id="project-02" src="resources/statue.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Thiruvalluvar Statue, <em>Kurichi Lake</em></h3>
+            </div>
+            <div class="archive-card-cat">Civic</div>
+          </div>
+          <p>Public monument in Coimbatore dedicated to the revered Tamil poet and philosopher Thiruvalluvar, standing beside the scenic Kurichi Lake—a popular urban green space attracting visitors for leisure and cultural appreciation.</p>
+        </article>
+
+        <!-- Project 3 (Civic) -->
+        <article class="archive-card" data-category="civic">
+          <div class="archive-card-img">
+            <image-slot id="project-03" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>G.D. Naidu Bridge, <em>Coimbatore</em></h3>
+            </div>
+            <div class="archive-card-cat">Civic</div>
+          </div>
+          <p>The elevated corridor runs along Avinashi Road, one of Coimbatore's primary urban arteries, connecting key commercial, residential, airport, educational, and industrial zones. A tribute to G.D. Naidu, renowned inventor and industrialist who significantly influenced Coimbatore's industrial development.</p>
+        </article>
+
+        <!-- Project 4 (Civic) -->
+        <article class="archive-card" data-category="civic">
+          <div class="archive-card-img">
+            <image-slot id="project-04" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Horse Court Area, <em>Coimbatore</em></h3>
+            </div>
+            <div class="archive-card-cat">Civic</div>
+          </div>
+          <p>Coimbatore's Kuthirai Vandi Court, a handsome British-era building that once kept vigil on horse cart owners, cranked to a halt in the 1990s. Resurrected from ruins, this building stands testimony to a time when horse carts served as last-mile connectivity.</p>
+        </article>
+
+        <!-- Project 5 (Industrial) -->
+        <article class="archive-card" data-category="industrial">
+          <div class="archive-card-img">
+            <image-slot id="project-05" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Makino, <em>Industrial Facility</em></h3>
+            </div>
+            <div class="archive-card-cat">Industrial</div>
+          </div>
+          <p>Content to be added soon. Lighting consultant and supply services for industrial installations.</p>
+        </article>
+
+        <!-- Project 6 (Commercial) -->
+        <article class="archive-card" data-category="commercial">
+          <div class="archive-card-img">
+            <image-slot id="project-06" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Karthipuram, <em>Residential Layouts</em></h3>
+            </div>
+            <div class="archive-card-cat">Commercial</div>
+          </div>
+          <p>A commercial-scale lighting consultation and installation project executed for Karthipuram residential layouts, designing common area illumination and street lighting systems.</p>
+        </article>
+
+        <!-- Project 7 (Hospitality) -->
+        <article class="archive-card" data-category="hospitality">
+          <div class="archive-card-img">
+            <image-slot id="project-07" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Darza Luxury Resort, <em>Coimbatore</em></h3>
+            </div>
+            <div class="archive-card-cat">Hospitality</div>
+          </div>
+          <p>Set against the backdrop of the Sanjeevani mountain peaks, Darza Resorts combines sleek modern Scandinavian design with lush natural landscapes. Our lighting brief focused on highlighting the architecture's clean lines and the surrounding canopy of ancient trees, creating a sophisticated, tranquil evening atmosphere across the private villas, open-air dining spaces, and expansive lawns.</p>
+        </article>
+
+        <!-- Project 8 (Residential) -->
+        <article class="archive-card" data-category="residential">
+          <div class="archive-card-img">
+            <image-slot id="project-08" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>The Maple House, <em>Coimbatore</em></h3>
+            </div>
+            <div class="archive-card-cat">Residential</div>
+          </div>
+          <p>Layered illumination across a 9,000 sq ft villa.</p>
+        </article>
+
+        <!-- Project 9 (Commercial) -->
+        <article class="archive-card" data-category="commercial">
+          <div class="archive-card-img">
+            <image-slot id="project-09" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Veriah Tower, <em>Bengaluru</em></h3>
+            </div>
+            <div class="archive-card-cat">Commercial</div>
+          </div>
+          <p>Circadian-tuned lighting across four corporate floors.</p>
+        </article>
+
+        <!-- Project 10 (Residential) -->
+        <article class="archive-card" data-category="residential">
+          <div class="archive-card-img">
+            <image-slot id="project-10" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>The Oasis Villa, <em>Erode</em></h3>
+            </div>
+            <div class="archive-card-cat">Residential</div>
+          </div>
+          <p>Minimalist interior lighting and hidden cove details for a contemporary private residence.</p>
+        </article>
+
+        <!-- Project 11 (Commercial) -->
+        <article class="archive-card" data-category="commercial">
+          <div class="archive-card-img">
+            <image-slot id="project-11" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Textile Plaza, <em>Surat</em></h3>
+            </div>
+            <div class="archive-card-cat">Commercial</div>
+          </div>
+          <p>Dynamic facade illumination and architectural highlights for a modern commercial shopping landmark.</p>
+        </article>
+
+        <!-- Project 12 (Industrial) -->
+        <article class="archive-card" data-category="industrial">
+          <div class="archive-card-img">
+            <image-slot id="project-12" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3>Elgi Ultra Factory, <em>Coimbatore</em></h3>
+            </div>
+            <div class="archive-card-cat">Industrial</div>
+          </div>
+          <p>Energy-efficient high-bay lighting design optimizing safety and visibility on the production floor.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="archive-cta">
+    <div class="container">
+      <h2>Yours could be <em>next.</em></h2>
+      <a href="contact.html" class="arrow-link">Start a Conversation →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 36px; margin-bottom: 1rem;">
+          <p>Anoora Energy Concept Pvt Ltd. Lighting consultants and suppliers, working across India since 1988.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="index.html#practice">Practice</a>
+          <a href="index.html#work">Selected Work</a>
+          <a href="projects.html">Project Archive</a>
+          <a href="index.html#voices">Voices</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sectors</h4>
+          <a href="#">Residential</a>
+          <a href="#">Commercial</a>
+          <a href="#">Industrial</a>
+          <a href="#">Civic</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>A-44, Sampath Nagar<br>Erode, Tamil Nadu</p>
+          <a href="tel:+919842033144">+91 98420 33144</a>
+          <a href="mailto:info@anoora.in">info@anoora.in</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Anoora Energy Concept Pvt Ltd.</span>
+        <span>Site designed with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Slot Component -->
+  <script src="image-slot.js"></script>
+
+  <!-- Tweaks Panel -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="tweaks_panel.jsx" type="text/babel"></script>
+
+  <!-- Dynamic Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Nav scroll behavior
+      const nav = document.getElementById('nav');
+      const onScroll = () => {
+        if (window.scrollY > 80) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Dynamic Filtering Logic
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.archive-card');
+      const countEl = document.getElementById('showing-count');
+      const totalCount = cards.length;
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          // Toggle active class on buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterVal = btn.getAttribute('data-filter');
+          let visibleCount = 0;
+
+          cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            
+            if (filterVal === 'all' || cardCat === filterVal) {
+              // Fade in card smoothly
+              card.style.display = '';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+              visibleCount++;
+            } else {
+              // Hide card
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(15px)';
+              card.style.display = 'none';
+            }
+          });
+
+          // Update count
+          countEl.textContent = visibleCount;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
