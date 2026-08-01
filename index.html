@@ -461,14 +461,16 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    // Scroll reveal animations
+    // Scroll reveal animations — elements that cross the threshold together
+    // cascade in rather than fading up as one flat block.
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
+      entries
+        .filter(e => e.isIntersecting)
+        .forEach((e, i) => {
+          e.target.style.transitionDelay = `${i * 70}ms`;
           e.target.classList.add('in');
           io.unobserve(e.target);
-        }
-      });
+        });
     }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
 
     document.querySelectorAll('.reveal, .img-reveal').forEach(el => io.observe(el));
@@ -482,7 +484,7 @@
       const dot = document.createElement('button');
       dot.className = 't-dot' + (i === 0 ? ' active' : '');
       dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
-      dot.addEventListener('click', () => setT(i));
+      dot.addEventListener('click', () => goToT(i));
       dotsEl.appendChild(dot);
     });
 
@@ -492,11 +494,22 @@
       document.querySelectorAll('.t-dot').forEach((d, j) => d.classList.toggle('active', j === activeT));
     }
 
-    document.getElementById('nextT').addEventListener('click', () => setT(activeT + 1));
-    document.getElementById('prevT').addEventListener('click', () => setT(activeT - 1));
+    // Auto-advance testimonials — any manual navigation resets the timer so
+    // it doesn't yank the visitor back forward right after they've clicked.
+    let tTimer;
+    function restartAutoAdvance() {
+      clearInterval(tTimer);
+      tTimer = setInterval(() => setT(activeT + 1), 7000);
+    }
+    function goToT(i) {
+      setT(i);
+      restartAutoAdvance();
+    }
 
-    // Auto-advance testimonials
-    setInterval(() => setT(activeT + 1), 7000);
+    document.getElementById('nextT').addEventListener('click', () => goToT(activeT + 1));
+    document.getElementById('prevT').addEventListener('click', () => goToT(activeT - 1));
+
+    restartAutoAdvance();
   </script>
 </body>
 </html>

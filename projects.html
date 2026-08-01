@@ -295,15 +295,15 @@
           
           if (filterVal === 'all' || cardCat === filterVal) {
             card.style.display = '';
-            setTimeout(() => {
+            requestAnimationFrame(() => {
               card.style.opacity = '1';
               card.style.transform = 'translateY(0)';
-            }, 50);
+            });
             visibleCount++;
           } else {
             card.style.opacity = '0';
             card.style.transform = 'translateY(15px)';
-            card.style.display = 'none';
+            setTimeout(() => { card.style.display = 'none'; }, 350);
           }
         });
 
