@@ -62,7 +62,8 @@ Fields I could not source show `— to confirm —` on the page so they're easy 
 | # | Project | Location | Web | Verify |
 | --- | --- | --- | --- | --- |
 | 16 | KMCH | Coimbatore | ✅ | Kovai Medical Center & Hospital — which block/campus? |
-| 17 | Care24 / Kalyani Kidney Care | Erode | ⚠️ | Doc lists these together — one project or two? |
+| 17 | Care24 | Erode | ✅ | Confirmed by Anoora: separate project from Kalyani Kidney Care |
+| 17b | Kalyani Kidney Care | Erode | ✅ | Confirmed by Anoora: separate project. Nephro-urology centre, est. 2004 |
 | 18 | Avitis Hospital | Palakkad | ✅ | Avitis Institute of Medical Sciences, Kerala |
 
 ## Education
@@ -174,7 +175,7 @@ strip rather than archive entries.
 - Duplicates I could not resolve: "Shiny Textile Process" / "Bala Silks" ran
   together on one line in the doc; I split them into two entries. **Both now
   resolved:** Shiny Knitwear (Tiruppur) and Bala Silks (saree store, Erode).
-  Still open: "Care24, Kalyani Kidney Care", which I kept as **one** entry —
-  say if it's two.
+  "Care24, Kalyani Kidney Care" is **two separate projects**, confirmed by
+  Anoora, and is now listed as two entries.
 - ~~"Lakshmi Mill" — Lakshmi Machine Works and Lakshmi Mills are different
   companies.~~ **Resolved:** it is Lakshmi Machine Works. Now listed as **LMW**.
