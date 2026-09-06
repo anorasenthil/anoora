@@ -95,7 +95,7 @@ Fields I could not source show `— to confirm —` on the page so they're easy 
 | 32 | KRC | Tiruppur | ❌ | Confirm full name |
 | 33 | Nethaji Apparel Park | Perumanallur, Tiruppur | ✅ | Large apparel SEZ |
 | 34 | Mangai Petticoats | Erode | ❌ | Nothing public found |
-| 35 | Shiny Textile Process | — | ❌ | Doc runs this together with "Bala Silks" — likely two entries |
+| 35 | Shiny Knitwear | Tiruppur | ✅ | Confirmed by Anoora: Shiny Knitwear, Tiruppur (knitwear manufacturer/exporter, est. 1997) |
 | 36 | Bala Silks | — | ⚠️ | See above |
 | 37 | KKSK (leather) | — | ❌ | Confirm full name and location |
 | 38 | Tex Valley | Erode | ✅ | Large textile trade centre |
@@ -172,7 +172,9 @@ strip rather than archive entries.
 - The **Verify** column above, row by row — especially the ❌ rows where I found
   nothing public and am relying entirely on the document's spelling.
 - Duplicates I could not resolve: "Shiny Textile Process" / "Bala Silks" ran
-  together on one line in the doc; I split them into two entries. Same for
-  "Care24, Kalyani Kidney Care", which I kept as **one** entry — say if it's two.
+  together on one line in the doc; I split them into two entries. **Both now
+  resolved:** Shiny Knitwear (Tiruppur) and Bala Silks (saree store, Erode).
+  Still open: "Care24, Kalyani Kidney Care", which I kept as **one** entry —
+  say if it's two.
 - ~~"Lakshmi Mill" — Lakshmi Machine Works and Lakshmi Mills are different
   companies.~~ **Resolved:** it is Lakshmi Machine Works. Now listed as **LMW**.
