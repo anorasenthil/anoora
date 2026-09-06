@@ -83,7 +83,7 @@ Fields I could not source show `— to confirm —` on the page so they're easy 
 | 25 | Sakthi Sugars | Erode/Bhavani | ✅ | Confirm which unit |
 | 26 | Ampo Valves | Coimbatore | ✅ | AMPO (Spanish valve maker) India facility |
 | 27 | CRI Pumps | Coimbatore | ✅ | Major pump manufacturer |
-| 28 | Lakshmi Mill (textile machinery) | Coimbatore | ✅ | Lakshmi Machine Works or Lakshmi Mills — these are different companies, confirm |
+| 28 | LMW (Lakshmi Machine Works) | Coimbatore | ✅ | Confirmed by Anoora: Lakshmi Machine Works, not Lakshmi Mills |
 | 29 | Esperto Car | Coimbatore | ❌ | Car showroom/service? |
 | 30 | Green Pixel | Coimbatore | ❌ | Nothing public found |
 
@@ -174,6 +174,5 @@ strip rather than archive entries.
 - Duplicates I could not resolve: "Shiny Textile Process" / "Bala Silks" ran
   together on one line in the doc; I split them into two entries. Same for
   "Care24, Kalyani Kidney Care", which I kept as **one** entry — say if it's two.
-- "Lakshmi Mill" — Lakshmi Machine Works and Lakshmi Mills are different
-  companies. The doc says "Lakshmi Mill textile machinery", which points at
-  Lakshmi Machine Works. Currently listed as "Lakshmi Mill".
+- ~~"Lakshmi Mill" — Lakshmi Machine Works and Lakshmi Mills are different
+  companies.~~ **Resolved:** it is Lakshmi Machine Works. Now listed as **LMW**.
