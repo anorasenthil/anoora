@@ -198,7 +198,17 @@ body.nav-locked { overflow: hidden; }
   .nav-links {
     display: flex;
     position: fixed;
-    inset: 0;
+    /* Deliberately not `inset: 0`. Once .nav is scrolled it carries a
+       backdrop-filter, which makes it the containing block for fixed
+       descendants — `inset: 0` would then resolve against the header bar and
+       crop the drawer to a strip at the top. The nav's padding box starts at
+       the viewport origin and spans its full width, so anchoring to 0,0 with
+       an explicit width/height is correct whichever box wins. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
     /* .nav-links carries justify-self: center for the desktop row; on a
        positioned box that shrink-to-fits the drawer instead of filling it. */
     justify-self: stretch;
@@ -208,6 +218,8 @@ body.nav-locked { overflow: hidden; }
     gap: 0.5rem;
     padding: 6rem 2rem 3rem;
     background: var(--paper);
+    /* Landscape phones don't have room for five 2rem items plus the padding. */
+    overflow-y: auto;
     /* Kept in the layer order but inert until opened, so it never traps taps. */
     opacity: 0;
     visibility: hidden;
