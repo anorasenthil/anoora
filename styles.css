@@ -276,12 +276,16 @@ body.nav-locked { overflow: hidden; }
   }
   .nav-links-cta a,
   .nav.scrolled .nav-links-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
     font-family: var(--font-sans);
     font-size: 0.8125rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--gold);
   }
+  .nav-links-cta svg { width: 14px; height: 14px; flex-shrink: 0; }
 }
 
 /* Visitor-facing stand-in for projects still awaiting photography. */
@@ -1291,6 +1295,11 @@ footer {
 }
 .nav.nav-always-dark .nav-links a {
   color: var(--ink);
+}
+/* The mobile drawer is --paper on every page, so its CTA keeps the gold it
+   has on the home nav — the rule above would otherwise flatten it to ink. */
+.nav.nav-always-dark .nav-links-cta a {
+  color: var(--gold);
 }
 .nav.nav-always-dark .nav-cta {
   color: var(--ink);
@@ -2613,11 +2622,9 @@ footer {
 @media (max-width: 560px) {
   .register-section { padding: 4rem 0; }
   .register-grid { grid-template-columns: 1fr; gap: 2.25rem; }
-  /* Stack name over place so long names aren't squeezed into half a line. */
-  .register-group li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.15rem;
-    padding: 0.7rem 0;
-  }
+  /* Keep the base row layout: name left, place right-aligned against the
+     page edge. A long name wraps within its own column rather than pushing
+     the place out of alignment. */
+  .register-group li { padding: 0.7rem 0; }
+  .reg-place { text-align: right; }
 }
