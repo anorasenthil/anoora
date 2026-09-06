@@ -1,0 +1,376 @@
+{
+ "statue": {
+  "orig": "resources/Thiruvalluvar Statue/statue.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/statue-640.jpg",
+   "1280": "resources/rs/statue-1280.jpg",
+   "2000": "resources/rs/statue-2000.jpg"
+  }
+ },
+ "horse-court": {
+  "orig": "resources/Horse court/horse-court.jpg",
+  "w": 1237,
+  "variants": {
+   "640": "resources/rs/horse-court-640.jpg",
+   "1237": "resources/rs/horse-court-1237.jpg"
+  }
+ },
+ "darza-1": {
+  "orig": "resources/darza-resort/darza-1.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/darza-1-640.jpg",
+   "1280": "resources/rs/darza-1-1280.jpg",
+   "2000": "resources/rs/darza-1-2000.jpg"
+  }
+ },
+ "darza-2": {
+  "orig": "resources/darza-resort/darza-2.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/darza-2-640.jpg",
+   "1280": "resources/rs/darza-2-1280.jpg",
+   "2000": "resources/rs/darza-2-2000.jpg"
+  }
+ },
+ "darza-3": {
+  "orig": "resources/darza-resort/darza-3.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/darza-3-640.jpg",
+   "1280": "resources/rs/darza-3-1280.jpg",
+   "2000": "resources/rs/darza-3-2000.jpg"
+  }
+ },
+ "darza-5": {
+  "orig": "resources/darza-resort/darza-5.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/darza-5-640.jpg",
+   "1280": "resources/rs/darza-5-1280.jpg",
+   "2000": "resources/rs/darza-5-2000.jpg"
+  }
+ },
+ "darza-6": {
+  "orig": "resources/darza-resort/darza-6.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/darza-6-640.jpg",
+   "1280": "resources/rs/darza-6-1280.jpg",
+   "2000": "resources/rs/darza-6-2000.jpg"
+  }
+ },
+ "smart-city": {
+  "orig": "resources/selvachinthamani/smart-city.jpg",
+  "w": 1280,
+  "variants": {
+   "640": "resources/rs/smart-city-640.jpg",
+   "1280": "resources/rs/smart-city-1280.jpg"
+  }
+ },
+ "selvachinthamani-2": {
+  "orig": "resources/selvachinthamani/selvachinthamani-2.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/selvachinthamani-2-640.jpg",
+   "1280": "resources/rs/selvachinthamani-2-1280.jpg",
+   "2000": "resources/rs/selvachinthamani-2-2000.jpg"
+  }
+ },
+ "gd-naidu-1": {
+  "orig": "resources/gd-naidu-bridge/gd-naidu-1.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/gd-naidu-1-640.jpg",
+   "1280": "resources/rs/gd-naidu-1-1280.jpg",
+   "2000": "resources/rs/gd-naidu-1-2000.jpg"
+  }
+ },
+ "gd-naidu-2": {
+  "orig": "resources/gd-naidu-bridge/gd-naidu-2.jpg",
+  "w": 365,
+  "variants": {
+   "365": "resources/rs/gd-naidu-2-365.jpg"
+  }
+ },
+ "gd-naidu-3": {
+  "orig": "resources/gd-naidu-bridge/gd-naidu-3.webp",
+  "w": 765,
+  "variants": {
+   "640": "resources/rs/gd-naidu-3-640.jpg",
+   "765": "resources/rs/gd-naidu-3-765.jpg"
+  }
+ },
+ "cotton-9254": {
+  "orig": "resources/cotton-city/0M9A9254.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9254-640.jpg",
+   "1280": "resources/rs/cotton-9254-1280.jpg",
+   "2000": "resources/rs/cotton-9254-2000.jpg"
+  }
+ },
+ "cotton-9255": {
+  "orig": "resources/cotton-city/0M9A9255.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9255-640.jpg",
+   "1280": "resources/rs/cotton-9255-1280.jpg",
+   "2000": "resources/rs/cotton-9255-2000.jpg"
+  }
+ },
+ "cotton-9256": {
+  "orig": "resources/cotton-city/0M9A9256.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9256-640.jpg",
+   "1280": "resources/rs/cotton-9256-1280.jpg",
+   "2000": "resources/rs/cotton-9256-2000.jpg"
+  }
+ },
+ "cotton-9257": {
+  "orig": "resources/cotton-city/0M9A9257.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9257-640.jpg",
+   "1280": "resources/rs/cotton-9257-1280.jpg",
+   "2000": "resources/rs/cotton-9257-2000.jpg"
+  }
+ },
+ "cotton-9258": {
+  "orig": "resources/cotton-city/0M9A9258.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9258-640.jpg",
+   "1280": "resources/rs/cotton-9258-1280.jpg",
+   "2000": "resources/rs/cotton-9258-2000.jpg"
+  }
+ },
+ "cotton-9260": {
+  "orig": "resources/cotton-city/0M9A9260.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9260-640.jpg",
+   "1280": "resources/rs/cotton-9260-1280.jpg",
+   "2000": "resources/rs/cotton-9260-2000.jpg"
+  }
+ },
+ "cotton-9261": {
+  "orig": "resources/cotton-city/0M9A9261.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9261-640.jpg",
+   "1280": "resources/rs/cotton-9261-1280.jpg",
+   "2000": "resources/rs/cotton-9261-2000.jpg"
+  }
+ },
+ "cotton-9262": {
+  "orig": "resources/cotton-city/0M9A9262.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9262-640.jpg",
+   "1280": "resources/rs/cotton-9262-1280.jpg",
+   "2000": "resources/rs/cotton-9262-2000.jpg"
+  }
+ },
+ "cotton-9264": {
+  "orig": "resources/cotton-city/0M9A9264.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9264-640.jpg",
+   "1280": "resources/rs/cotton-9264-1280.jpg",
+   "2000": "resources/rs/cotton-9264-2000.jpg"
+  }
+ },
+ "cotton-9266": {
+  "orig": "resources/cotton-city/0M9A9266.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9266-640.jpg",
+   "1280": "resources/rs/cotton-9266-1280.jpg",
+   "2000": "resources/rs/cotton-9266-2000.jpg"
+  }
+ },
+ "cotton-9268": {
+  "orig": "resources/cotton-city/0M9A9268.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9268-640.jpg",
+   "1280": "resources/rs/cotton-9268-1280.jpg",
+   "2000": "resources/rs/cotton-9268-2000.jpg"
+  }
+ },
+ "cotton-9269": {
+  "orig": "resources/cotton-city/0M9A9269.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9269-640.jpg",
+   "1280": "resources/rs/cotton-9269-1280.jpg",
+   "2000": "resources/rs/cotton-9269-2000.jpg"
+  }
+ },
+ "cotton-9270": {
+  "orig": "resources/cotton-city/0M9A9270.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9270-640.jpg",
+   "1280": "resources/rs/cotton-9270-1280.jpg",
+   "2000": "resources/rs/cotton-9270-2000.jpg"
+  }
+ },
+ "cotton-9271": {
+  "orig": "resources/cotton-city/0M9A9271.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9271-640.jpg",
+   "1280": "resources/rs/cotton-9271-1280.jpg",
+   "2000": "resources/rs/cotton-9271-2000.jpg"
+  }
+ },
+ "cotton-9272": {
+  "orig": "resources/cotton-city/0M9A9272.jpg",
+  "w": 2560,
+  "variants": {
+   "640": "resources/rs/cotton-9272-640.jpg",
+   "1280": "resources/rs/cotton-9272-1280.jpg",
+   "2000": "resources/rs/cotton-9272-2000.jpg"
+  }
+ },
+ "marriott-trichy-facade": {
+  "orig": "resources/Mariott Trichy/cy-trzcy-hotel-facade-39265_Classic-Hor.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-facade-640.jpg",
+   "1280": "resources/rs/marriott-trichy-facade-1280.jpg"
+  }
+ },
+ "marriott-trichy-pool": {
+  "orig": "resources/Mariott Trichy/cy-trzcy-swimming-pool-38145-41965_Classic-Hor.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-pool-640.jpg",
+   "1280": "resources/rs/marriott-trichy-pool-1280.jpg"
+  }
+ },
+ "marriott-trichy-dining": {
+  "orig": "resources/Mariott Trichy/cy-trzcy-trichy-kitchen-dining-746-14527_Classic-Hor.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-dining-640.jpg",
+   "1280": "resources/rs/marriott-trichy-dining-1280.jpg"
+  }
+ },
+ "marriott-trichy-kitchen": {
+  "orig": "resources/Mariott Trichy/cy-trzcy-trichy-kitchen-32985-17145_Classic-Hor.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-kitchen-640.jpg",
+   "1280": "resources/rs/marriott-trichy-kitchen-1280.jpg"
+  }
+ },
+ "marriott-trichy-banquet": {
+  "orig": "resources/Mariott Trichy/cy-trzcy-nanjai-u-shape-set-up-15882_Classic-Hor.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-banquet-640.jpg",
+   "1280": "resources/rs/marriott-trichy-banquet-1280.jpg"
+  }
+ },
+ "marriott-trichy-gym": {
+  "orig": "resources/Mariott Trichy/cy-trzcy-gym-498523-36801_Classic-Hor.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-gym-640.jpg",
+   "1280": "resources/rs/marriott-trichy-gym-1280.jpg"
+  }
+ },
+ "marriott-trichy-room": {
+  "orig": "resources/Mariott Trichy/room.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-room-640.jpg",
+   "1280": "resources/rs/marriott-trichy-room-1280.jpg"
+  }
+ },
+ "marriott-trichy-bath": {
+  "orig": "resources/Mariott Trichy/toilet.jpg",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-trichy-bath-640.jpg",
+   "1280": "resources/rs/marriott-trichy-bath-1280.jpg"
+  }
+ },
+ "marriott-madurai-exterior": {
+  "orig": "resources/Mariott Madurai/ixmcy-exterior-5054-hor-clsc.avif",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-madurai-exterior-640.jpg",
+   "1280": "resources/rs/marriott-madurai-exterior-1280.jpg"
+  }
+ },
+ "marriott-madurai-pool": {
+  "orig": "resources/Mariott Madurai/ixmcy-pool-5262-hor-clsc.avif",
+  "w": 1336,
+  "variants": {
+   "640": "resources/rs/marriott-madurai-pool-640.jpg",
+   "1280": "resources/rs/marriott-madurai-pool-1280.jpg"
+  }
+ },
+ "mango-hill-drone-1": {
+  "orig": "resources/Mango Hill Ooty/Drone_1.png",
+  "w": 900,
+  "variants": {
+   "640": "resources/rs/mango-hill-drone-1-640.jpg",
+   "900": "resources/rs/mango-hill-drone-1-900.jpg"
+  }
+ },
+ "mango-hill-drone-3": {
+  "orig": "resources/Mango Hill Ooty/Drone_3.png",
+  "w": 900,
+  "variants": {
+   "640": "resources/rs/mango-hill-drone-3-640.jpg",
+   "900": "resources/rs/mango-hill-drone-3-900.jpg"
+  }
+ },
+ "mango-hill-facade-2": {
+  "orig": "resources/Mango Hill Ooty/facade-2.png",
+  "w": 900,
+  "variants": {
+   "640": "resources/rs/mango-hill-facade-2-640.jpg",
+   "900": "resources/rs/mango-hill-facade-2-900.jpg"
+  }
+ },
+ "mango-hill-facade-3": {
+  "orig": "resources/Mango Hill Ooty/Facade_3.png",
+  "w": 900,
+  "variants": {
+   "640": "resources/rs/mango-hill-facade-3-640.jpg",
+   "900": "resources/rs/mango-hill-facade-3-900.jpg"
+  }
+ },
+ "mango-hill-facade-5": {
+  "orig": "resources/Mango Hill Ooty/facade_5.png",
+  "w": 900,
+  "variants": {
+   "640": "resources/rs/mango-hill-facade-5-640.jpg",
+   "900": "resources/rs/mango-hill-facade-5-900.jpg"
+  }
+ },
+ "mango-hill-facade-7": {
+  "orig": "resources/Mango Hill Ooty/facade_7.png",
+  "w": 900,
+  "variants": {
+   "640": "resources/rs/mango-hill-facade-7-640.jpg",
+   "900": "resources/rs/mango-hill-facade-7-900.jpg"
+  }
+ },
+ "kalingarayan": {
+  "orig": "resources/unnamed.jpg",
+  "w": 1360,
+  "variants": {
+   "640": "resources/rs/kalingarayan-640.jpg",
+   "1280": "resources/rs/kalingarayan-1280.jpg"
+  }
+ }
+}

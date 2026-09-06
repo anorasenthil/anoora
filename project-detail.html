@@ -12,20 +12,24 @@
 </head>
 <body>
   <!-- Nav -->
-  <nav class="nav nav-always-dark" id="nav" style="padding: 20px 48px">
+  <nav class="nav nav-always-dark" id="nav">
     <a href="index.html" class="nav-brand" aria-label="Anoora — Home">
       <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 24px">
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#practice">Practice</a></li>
       <li><a href="index.html#work">Work</a></li>
       <li><a href="projects.html" class="active">PROJECTS</a></li>
       <li><a href="index.html#voices">Voices</a></li>
+      <li class="nav-links-cta"><a href="contact.html">Get in Touch</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">
       Get in Touch
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
     </a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- Project Detail Section -->
@@ -75,7 +79,7 @@
 
       <!-- Main Project Hero Image Slot -->
       <div class="project-detail-main-img-wrap">
-        <image-slot id="main-project-slot" shape="rounded" radius="12" style="width:100%;height:100%;"></image-slot>
+        <img id="main-project-img" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" fetchpriority="high" decoding="async">
       </div>
 
     </div>
@@ -166,7 +170,7 @@
           <h4>Sectors</h4>
           <ul>
             <li><a href="projects.html?filter=residential">Residential</a></li>
-            <li><a href="projects.html?filter=commercial">Commercial</a></li>
+            <li><a href="projects.html?filter=hospitality">Hospitality</a></li>
             <li><a href="projects.html?filter=industrial">Industrial</a></li>
             <li><a href="projects.html?filter=civic">Civic</a></li>
           </ul>
@@ -190,12 +194,20 @@
     </div>
   </footer>
 
-  <!-- Image Slot Component -->
-  <script src="image-slot.js"></script>
+  <script src="nav.js" defer></script>
 
   <!-- Router and Data Binding -->
   <script>
-    // Project Dataset (8 Projects)
+    // Responsive gallery sources. Variants live at resources/rs/<slug>-<width>.jpg;
+    // this map records which widths were actually generated for each image.
+    const RS_WIDTHS = {"statue":[640,1280,2000],"horse-court":[640,1237],"darza-1":[640,1280,2000],"darza-2":[640,1280,2000],"darza-3":[640,1280,2000],"darza-5":[640,1280,2000],"darza-6":[640,1280,2000],"smart-city":[640,1280],"selvachinthamani-2":[640,1280,2000],"gd-naidu-1":[640,1280,2000],"gd-naidu-2":[365],"gd-naidu-3":[640,765],"cotton-9254":[640,1280,2000],"cotton-9255":[640,1280,2000],"cotton-9256":[640,1280,2000],"cotton-9257":[640,1280,2000],"cotton-9258":[640,1280,2000],"cotton-9260":[640,1280,2000],"cotton-9261":[640,1280,2000],"cotton-9262":[640,1280,2000],"cotton-9264":[640,1280,2000],"cotton-9266":[640,1280,2000],"cotton-9268":[640,1280,2000],"cotton-9269":[640,1280,2000],"cotton-9270":[640,1280,2000],"cotton-9271":[640,1280,2000],"cotton-9272":[640,1280,2000],"marriott-trichy-facade":[640,1280],"marriott-trichy-pool":[640,1280],"marriott-trichy-dining":[640,1280],"marriott-trichy-kitchen":[640,1280],"marriott-trichy-banquet":[640,1280],"marriott-trichy-gym":[640,1280],"marriott-trichy-room":[640,1280],"marriott-trichy-bath":[640,1280],"marriott-madurai-exterior":[640,1280],"marriott-madurai-pool":[640,1280],"mango-hill-drone-1":[640,900],"mango-hill-drone-3":[640,900],"mango-hill-facade-2":[640,900],"mango-hill-facade-3":[640,900],"mango-hill-facade-5":[640,900],"mango-hill-facade-7":[640,900],"kalingarayan":[640,1280]};
+    function srcsetFor(src) {
+      const m = /resources\/rs\/(.+)-(\d+)\.jpg$/.exec(src);
+      if (!m || !RS_WIDTHS[m[1]]) return '';
+      return RS_WIDTHS[m[1]].map(w => `resources/rs/${m[1]}-${w}.jpg ${w}w`).join(', ');
+    }
+
+    // Project Dataset (12 Projects)
     const projectData = {
       'smart-city': {
         title: 'Smart City',
@@ -207,10 +219,11 @@
         year: '2023',
         client: 'Coimbatore Smart City Mission',
         lighting: 'Philips · K-Lite · Schréder',
-        mainImage: 'resources/selvachinthamani/smart-city.jpg',
+        mainImage: 'resources/rs/smart-city-1280.jpg',
+        mainSrcset: 'resources/rs/smart-city-640.jpg 640w, resources/rs/smart-city-1280.jpg 1280w',
         galleryImages: [
-          'resources/selvachinthamani/smart-city.jpg',
-          'resources/selvachinthamani/selvachinthamani-2.jpg'
+          'resources/rs/smart-city-1280.jpg',
+          'resources/rs/selvachinthamani-2-2000.jpg'
         ],
         narrativeHeading: 'The Waterfront <em>Brief.</em>',
         narrativeBody: '<p>Coimbatore entered the Government of India\'s Smart Cities Mission in January 2016, with lake eco-restoration, mobility, and public infrastructure at its core. We executed a ₹5–6 crore lighting scheme across the city\'s ancient interconnected lakes, turning them into vibrant civic spaces.</p><p>At Race Course and the lakeside promenades, we specified RGB colour-changing systems and distinct walkway lighting to balance public safety with high-end aesthetic appeal. The result is a 100% LED design that sets a benchmark for civic lighting across India.</p>'
@@ -225,9 +238,10 @@
         year: '2024',
         client: 'Coimbatore Smart City Mission',
         lighting: 'K-Lite Specialist Uplighters',
-        mainImage: 'resources/statue.jpg',
+        mainImage: 'resources/rs/statue-2000.jpg',
+        mainSrcset: 'resources/rs/statue-640.jpg 640w, resources/rs/statue-1280.jpg 1280w, resources/rs/statue-2000.jpg 2000w',
         galleryImages: [
-          'resources/statue.jpg'
+          'resources/rs/statue-2000.jpg'
         ],
         narrativeHeading: 'Writing in <em>Light.</em>',
         narrativeBody: '<p>This flagship installation of the Coimbatore Smart City Mission is a 20–25 ft stainless-steel figure built entirely from 1,330 interlaced Tamil letters — representing every Kural written by the poet Thiruvalluvar.</p><p>With natural gaps between each letter, the brief was to keep the form and script crystal clear at night without glare. We mounted K-Lite uplighters at calculated angles on all four sides, concealed within the sculpture itself, so the letters now read even more clearly after dark than in daylight.</p>'
@@ -242,11 +256,12 @@
         year: '2025',
         client: 'Public Works Department',
         lighting: 'Roadway + Architectural RGB',
-        mainImage: 'resources/gd-naidu-bridge/gd-naidu-1.jpg',
+        mainImage: 'resources/rs/gd-naidu-1-2000.jpg',
+        mainSrcset: 'resources/rs/gd-naidu-1-640.jpg 640w, resources/rs/gd-naidu-1-1280.jpg 1280w, resources/rs/gd-naidu-1-2000.jpg 2000w',
         galleryImages: [
-          'resources/gd-naidu-bridge/gd-naidu-1.jpg',
-          'resources/gd-naidu-bridge/gd-naidu-2.jpg',
-          'resources/gd-naidu-bridge/gd-naidu-3.webp'
+          'resources/rs/gd-naidu-1-2000.jpg',
+          'resources/rs/gd-naidu-2-365.jpg',
+          'resources/rs/gd-naidu-3-765.jpg'
         ],
         narrativeHeading: 'Artery of the <em>City.</em>',
         narrativeBody: '<p>The G.D. Naidu Bridge runs along Avinashi Road, one of Coimbatore\'s primary urban arteries. It connects key commercial, residential, and industrial zones.</p><p>Our design provides high-uniformity, low-glare roadway illumination for high-speed traffic, combined with custom-controlled RGB architectural accents along the bridge support pillars, creating a dignified landmark status in the city nightscape.</p><p style="font-size:0.85rem;opacity:0.7;margin-top:1rem;"><em>Photo source attribution: The Hindu</em></p>'
@@ -261,9 +276,10 @@
         year: '2024',
         client: 'Public Works Department (Heritage Division)',
         lighting: 'Warm Spotlights & Accents',
-        mainImage: 'resources/horse-court.jpg',
+        mainImage: 'resources/rs/horse-court-1237.jpg',
+        mainSrcset: 'resources/rs/horse-court-640.jpg 640w, resources/rs/horse-court-1237.jpg 1237w',
         galleryImages: [
-          'resources/horse-court.jpg'
+          'resources/rs/horse-court-1237.jpg'
         ],
         narrativeHeading: 'Resurrecting <em>Ruins.</em>',
         narrativeBody: '<p>Coimbatore\'s Kuthirai Vandi Court, a British-era building once used for horse cart regulation, had fallen into complete disuse before being taken up for heritage renovation by the PWD.</p><p>Resurrected from ruins, the building demanded a sensitive lighting scheme. We specified warm-white narrow-beam spots to accentuate the masonry columns and deep eaves, honoring the historical character of this brick-and-lime structure without modern distraction.</p>'
@@ -286,10 +302,10 @@
       'karthipuram': {
         title: 'Karthipuram Township',
         italicTitle: 'Neelambur',
-        breadcrumb: 'Anoora / Commercial',
+        breadcrumb: 'Anoora / Residential',
         lead: 'A massive ₹2.5 crore private township lighting scheme with 650 custom poles and a 15-metre media tower.',
         location: 'Neelambur, Coimbatore',
-        category: 'Commercial',
+        category: 'Residential',
         year: '2025',
         client: 'Unnamalai Promoters',
         lighting: 'Keselec Schréder & Philips',
@@ -297,6 +313,50 @@
         galleryImages: [],
         narrativeHeading: 'Township <em>Infrastructure.</em>',
         narrativeBody: '<p>A 250-acre private township in Neelambur, developed by Unnamalai Promoters. The brief demanded a world-class street and common area lighting layout comparable to international airport standards.</p><p>We worked with Keselec Schréder on lux calculations and specified around 650 conical poles across the layout. We are also completing a 15-metre media tower with imported Philips fixtures from the Netherlands, plus the full indoor and outdoor lighting for the project\'s offices.</p>'
+      },
+      'marriott-trichy': {
+        title: 'Courtyard by Marriott',
+        italicTitle: 'Tiruchirappalli',
+        breadcrumb: 'Anoora / Hospitality',
+        lead: 'Lighting across the arrival forecourt, guest floors, dining, banquet and leisure areas of a Courtyard by Marriott property.',
+        location: 'Collector’s Road, Tiruchirappalli',
+        category: 'Hospitality',
+        year: '2022',
+        client: 'Courtyard by Marriott, Tiruchirappalli',
+        lighting: '— to confirm —',
+        mainImage: 'resources/rs/marriott-trichy-facade-1280.jpg',
+        mainSrcset: 'resources/rs/marriott-trichy-facade-640.jpg 640w, resources/rs/marriott-trichy-facade-1280.jpg 1280w',
+        galleryImages: [
+          'resources/rs/marriott-trichy-facade-1280.jpg',
+          'resources/rs/marriott-trichy-pool-1280.jpg',
+          'resources/rs/marriott-trichy-dining-1280.jpg',
+          'resources/rs/marriott-trichy-banquet-1280.jpg',
+          'resources/rs/marriott-trichy-kitchen-1280.jpg',
+          'resources/rs/marriott-trichy-room-1280.jpg',
+          'resources/rs/marriott-trichy-gym-1280.jpg',
+          'resources/rs/marriott-trichy-bath-1280.jpg'
+        ],
+        narrativeHeading: 'Arrival, and <em>After.</em>',
+        narrativeBody: '<p>The 108-key property on Collector’s Road opened in November 2022 as the first international hotel brand in Tiruchirappalli. A hotel is read first at its entrance: the porte-cochère carries a recessed warm-white wash that lifts the soffit without glare at the drop-off, while the guest-room windows above are left to read as a quiet rhythm of occupied light across the facade.</p><p>Inside, the brief moved through distinctly different rooms on one visual language — the all-day Trichy Kitchen, 20,000 sq ft of banqueting that is the largest in the city, an outdoor pool terrace lit for safety without washing out the water, and guest rooms and bathrooms where light has to be flattering and functional at once.</p>'
+      },
+      'marriott-madurai': {
+        title: 'Courtyard by Marriott',
+        italicTitle: 'Madurai',
+        breadcrumb: 'Anoora / Hospitality',
+        lead: 'Exterior and pool-deck lighting for the 102-key Courtyard by Marriott in Madurai.',
+        location: 'Madurai, Tamil Nadu',
+        category: 'Hospitality',
+        year: '— to confirm —',
+        client: 'Courtyard by Marriott, Madurai',
+        lighting: '— to confirm —',
+        mainImage: 'resources/rs/marriott-madurai-exterior-1280.jpg',
+        mainSrcset: 'resources/rs/marriott-madurai-exterior-640.jpg 640w, resources/rs/marriott-madurai-exterior-1280.jpg 1280w',
+        galleryImages: [
+          'resources/rs/marriott-madurai-exterior-1280.jpg',
+          'resources/rs/marriott-madurai-pool-1280.jpg'
+        ],
+        narrativeHeading: 'A Facade at <em>Dusk.</em>',
+        narrativeBody: '<p>A 102-key property, and an exterior scheme built for the short window between sunset and night, when a building reads best: enough output to model the massing and pick out the vertical fins, restrained enough that the sky still holds colour behind it.</p><p>At the pool deck the priority inverts. Light goes low and indirect, kept off the water surface so the deck stays legible underfoot and the water reads as depth rather than glare.</p>'
       },
       'darza-resort': {
         title: 'Darza Luxury Resort',
@@ -308,14 +368,14 @@
         year: '2024',
         client: 'Darza Luxury Resorts',
         lighting: 'Landscape & Villa Accents',
-        mainImage: 'resources/darza-resort/darza-1.jpg',
+        mainImage: 'resources/rs/darza-3-2000.jpg',
+        mainSrcset: 'resources/rs/darza-3-640.jpg 640w, resources/rs/darza-3-1280.jpg 1280w, resources/rs/darza-3-2000.jpg 2000w',
         galleryImages: [
-          'resources/darza-resort/darza-1.jpg',
-          'resources/darza-resort/darza-2.jpg',
-          'resources/darza-resort/darza-3.jpg',
-          'resources/darza-resort/darza-4.jpg',
-          'resources/darza-resort/darza-5.jpg',
-          'resources/darza-resort/darza-6.jpg'
+          'resources/rs/darza-3-2000.jpg',
+          'resources/rs/darza-1-2000.jpg',
+          'resources/rs/darza-2-2000.jpg',
+          'resources/rs/darza-5-2000.jpg',
+          'resources/rs/darza-6-2000.jpg'
         ],
         narrativeHeading: 'Sophisticated <em>Calm.</em>',
         narrativeBody: '<p>Set against the backdrop of the Sanjeevani mountain peaks, Darza Resorts combines sleek modern Scandinavian design with lush natural landscapes. The resort\'s design features private pools, oxygen-rich lawns, and ancient trees.</p><p>Our lighting brief focused on highlighting the clean lines of the villas and the surrounding canopy of trees, creating a sophisticated, tranquil evening atmosphere across the private villas, open-air dining spaces, and expansive lawns.</p>'
@@ -323,47 +383,80 @@
       'cotton-city': {
         title: 'Cotton City',
         italicTitle: 'Coimbatore',
-        breadcrumb: 'Anoora / Commercial',
+        breadcrumb: 'Anoora / Residential',
         lead: 'Architectural facade and ambient landscape lighting designed for the Cotton City landmark.',
         location: 'Coimbatore, Tamil Nadu',
-        category: 'Commercial',
+        category: 'Residential',
         year: '2025',
         client: 'Cotton City Developers',
         lighting: 'Architectural LED & Landscape Accents',
-        mainImage: 'resources/cotton-city/0M9A9254.jpg',
+        mainImage: 'resources/rs/cotton-9254-2000.jpg',
+        mainSrcset: 'resources/rs/cotton-9254-640.jpg 640w, resources/rs/cotton-9254-1280.jpg 1280w, resources/rs/cotton-9254-2000.jpg 2000w',
         galleryImages: [
-          'resources/cotton-city/0M9A9254.jpg',
-          'resources/cotton-city/0M9A9255.jpg',
-          'resources/cotton-city/0M9A9256.jpg',
-          'resources/cotton-city/0M9A9257.jpg',
-          'resources/cotton-city/0M9A9258.jpg',
-          'resources/cotton-city/0M9A9260.jpg',
-          'resources/cotton-city/0M9A9261.jpg',
-          'resources/cotton-city/0M9A9262.jpg',
-          'resources/cotton-city/0M9A9264.jpg',
-          'resources/cotton-city/0M9A9266.jpg',
-          'resources/cotton-city/0M9A9268.jpg',
-          'resources/cotton-city/0M9A9269.jpg',
-          'resources/cotton-city/0M9A9270.jpg',
-          'resources/cotton-city/0M9A9271.jpg',
-          'resources/cotton-city/0M9A9272.jpg'
+          'resources/rs/cotton-9254-2000.jpg',
+          'resources/rs/cotton-9255-2000.jpg',
+          'resources/rs/cotton-9256-2000.jpg',
+          'resources/rs/cotton-9257-2000.jpg',
+          'resources/rs/cotton-9258-2000.jpg',
+          'resources/rs/cotton-9260-2000.jpg',
+          'resources/rs/cotton-9261-2000.jpg',
+          'resources/rs/cotton-9262-2000.jpg',
+          'resources/rs/cotton-9264-2000.jpg',
+          'resources/rs/cotton-9266-2000.jpg',
+          'resources/rs/cotton-9268-2000.jpg',
+          'resources/rs/cotton-9269-2000.jpg',
+          'resources/rs/cotton-9270-2000.jpg',
+          'resources/rs/cotton-9271-2000.jpg',
+          'resources/rs/cotton-9272-2000.jpg'
         ],
         narrativeHeading: 'Architectural <em>Luminescence.</em>',
         narrativeBody: '<p>Cotton City is a modern landmark development in Coimbatore. Our lighting brief focused on highlighting the building\'s architectural geometry and creating an inviting, sophisticated ambient atmosphere across the surrounding outdoor plazas and entryways.</p><p>We specified narrow-beam warm-white architectural grazer fixtures combined with subtle landscape uplighters, creating a seamless visual transition from the streetscape to the building interior.</p>'
+      },
+      'mango-hill-ooty': {
+        title: 'Mango Hill Shola',
+        italicTitle: 'Ooty',
+        breadcrumb: 'Anoora / Hospitality',
+        lead: 'Facade, pathway and landscape lighting for a Tuscan-style villa resort set above the carrot fields near Ooty Lake.',
+        location: 'Near Ooty Lake, The Nilgiris',
+        category: 'Hospitality',
+        year: '— to confirm —',
+        client: 'Mango Hill Hotels',
+        lighting: '— to confirm —',
+        mainImage: 'resources/rs/mango-hill-facade-7-900.jpg',
+        mainSrcset: 'resources/rs/mango-hill-facade-7-640.jpg 640w, resources/rs/mango-hill-facade-7-900.jpg 900w',
+        galleryImages: [
+          'resources/rs/mango-hill-facade-7-900.jpg',
+          'resources/rs/mango-hill-drone-1-900.jpg',
+          'resources/rs/mango-hill-drone-3-900.jpg',
+          'resources/rs/mango-hill-facade-2-900.jpg',
+          'resources/rs/mango-hill-facade-3-900.jpg',
+          'resources/rs/mango-hill-facade-5-900.jpg'
+        ],
+        narrativeHeading: 'Light on a <em>Hillside.</em>',
+        narrativeBody: '<p>The resort is built as Tuscan-style villas stepping down a hillside above the carrot fields near Ooty Lake — arched windows, deep balconies, tiled gables. The site falls away in terraces, so the lighting had to work as much on the walk between blocks as on the blocks themselves. Post-top lanterns follow the curve of the path at a spacing that keeps the steps and level changes readable without turning the route into a runway.</p><p>On the buildings the light is warm and low, picking up the arches and balcony returns rather than flooding the elevation. Seen from the fields below at dusk, the resort reads as a cluster of lit windows on the hill rather than a bright object sitting on it.</p>'
+      },
+      'kalingarayan-bhavani': {
+        title: 'Kalingarayan Statue',
+        italicTitle: 'Bhavani',
+        breadcrumb: 'Anoora / Civic',
+        lead: 'Memorial and landscape lighting for the Kalingarayan statue and its domed pavilion beside the Kalingarayan Anicut at Bhavani.',
+        location: 'Kalingarayan Anicut, Bhavani, Erode',
+        category: 'Civic',
+        year: '— to confirm —',
+        client: '— to confirm —',
+        lighting: '— to confirm —',
+        mainImage: 'resources/rs/kalingarayan-1280.jpg',
+        mainSrcset: 'resources/rs/kalingarayan-640.jpg 640w, resources/rs/kalingarayan-1280.jpg 1280w',
+        galleryImages: [
+          'resources/rs/kalingarayan-1280.jpg'
+        ],
+        narrativeHeading: 'A Memorial, <em>Held.</em>',
+        narrativeBody: '<p>The Kalingarayan Anicut on the Bhavani river was built between 1271 and 1283 by the Kongu chieftain Kalingarayan Gounder — one of the oldest river-linking works in Tamil Nadu. The memorial and its gardens came much later, part of a state scheme to open the anicut to visitors.</p><p>The statue sits under a tiered white dome at the head of a formal garden. The scheme separates the two: the figure stays the brightest thing in the composition, while the dome above takes a softer wash so it frames rather than competes. Low bollards mark the axial path and the beds either side, keeping the memorial approachable after dark — legible enough to walk, quiet enough to sit in.</p>'
       }
     };
 
     // DOM Population Script
     document.addEventListener('DOMContentLoaded', () => {
-      // Nav scroll behavior
-      const nav = document.getElementById('nav');
-      const onScroll = () => {
-        if (window.scrollY > 80) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-
       // Read URL Parameter
       const params = new URLSearchParams(window.location.search);
       const projectId = params.get('id') || 'smart-city';
@@ -390,10 +483,15 @@
       document.getElementById('narrative-body').innerHTML = project.narrativeBody;
 
       // Main Hero Image Slot
-      const mainSlot = document.getElementById('main-project-slot');
-      mainSlot.setAttribute('id', `project-${projectId}-main`);
+      const mainImg = document.getElementById('main-project-img');
       if (project.mainImage) {
-        mainSlot.setAttribute('src', project.mainImage);
+        mainImg.src = project.mainImage;
+        if (project.mainSrcset) mainImg.srcset = project.mainSrcset;
+        mainImg.sizes = '(max-width: 968px) 100vw, 60vw';
+        mainImg.alt = `${project.title} — project photography`;
+      } else {
+        mainImg.closest('.project-detail-main-img-wrap').innerHTML =
+          '<div class="img-placeholder">Photography coming soon</div>';
       }
 
       // Populate Gallery Scroll Container
@@ -407,7 +505,7 @@
       if (galleryImages.length > 0) {
         galleryContainer.innerHTML = galleryImages.map((imgSrc, i) => `
           <div class="gallery-slide">
-            <img src="${imgSrc}" alt="${project.title} photo ${i + 1}" loading="lazy">
+            <img src="${imgSrc}" srcset="${srcsetFor(imgSrc)}" sizes="(max-width: 768px) 85vw, 650px" alt="${project.title} photo ${i + 1}" loading="lazy" decoding="async">
           </div>
         `).join('');
 

@@ -12,20 +12,24 @@
 </head>
 <body>
   <!-- Nav -->
-  <nav class="nav nav-always-dark" id="nav" style="padding: 20px 48px">
+  <nav class="nav nav-always-dark" id="nav">
     <a href="index.html" class="nav-brand" aria-label="Anoora — Home">
       <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 24px">
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#practice">Practice</a></li>
       <li><a href="index.html#work">Work</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="index.html#voices">Voices</a></li>
+      <li class="nav-links-cta"><a href="contact.html">Get in Touch</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">
       Get in Touch
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
     </a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- Hero -->
@@ -189,7 +193,7 @@
           <h4>Sectors</h4>
           <ul>
             <li><a href="projects.html?filter=residential">Residential</a></li>
-            <li><a href="projects.html?filter=commercial">Commercial</a></li>
+            <li><a href="projects.html?filter=hospitality">Hospitality</a></li>
             <li><a href="projects.html?filter=industrial">Industrial</a></li>
             <li><a href="projects.html?filter=civic">Civic</a></li>
           </ul>
@@ -213,16 +217,9 @@
     </div>
   </footer>
 
-  <script>
-    // Nav scroll behavior (matches projects.html)
-    const nav = document.getElementById('nav');
-    const onScroll = () => {
-      if (window.scrollY > 80) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+  <script src="nav.js" defer></script>
 
+  <script>
     // Contact form (no backend — just confirms receipt client-side)
     const form = document.getElementById('contactForm');
     const success = document.getElementById('success');

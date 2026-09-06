@@ -12,20 +12,24 @@
 </head>
 <body>
   <!-- Nav -->
-  <nav class="nav nav-always-dark" id="nav" style="padding: 20px 48px">
+  <nav class="nav nav-always-dark" id="nav">
     <a href="index.html" class="nav-brand" aria-label="Anoora — Home">
       <img src="resources/anoora-wordmark.svg" alt="Anoora" style="height: 24px">
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#practice">Practice</a></li>
       <li><a href="index.html#work">Work</a></li>
       <li><a href="projects.html" class="active">PROJECTS</a></li>
       <li><a href="index.html#voices">Voices</a></li>
+      <li class="nav-links-cta"><a href="contact.html">Get in Touch</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">
       Get in Touch
       <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
     </a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- Archive Hero -->
@@ -37,13 +41,15 @@
           <h1>An archive of <em>light.</em></h1>
         </div>
         <div class="archive-hero-right">
-          <p>Eight recent projects from the past four years — a fraction of three decades of installations, but a fair portrait of how we work today.</p>
+          <p>Twelve projects from the past four years — a fraction of three decades of installations, but a fair portrait of how we work today.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sticky Filter Bar -->
+  <!-- Filter bar + the grid it controls. Wrapped together so the sticky bar
+       releases at the end of the archive instead of following the reader. -->
+  <div class="archive-scope">
   <div class="filter-bar" id="filter-bar">
     <div class="container">
       <div class="filter-bar-inner">
@@ -51,12 +57,11 @@
         <ul class="filter-categories">
           <li><button class="filter-btn active" data-filter="all">All</button></li>
           <li><button class="filter-btn" data-filter="residential">Residential</button></li>
-          <li><button class="filter-btn" data-filter="commercial">Commercial</button></li>
           <li><button class="filter-btn" data-filter="industrial">Industrial</button></li>
           <li><button class="filter-btn" data-filter="hospitality">Hospitality</button></li>
           <li><button class="filter-btn" data-filter="civic">Civic</button></li>
         </ul>
-        <span class="filter-counter">Showing <span id="showing-count">8</span> of 8</span>
+        <span class="filter-counter">Showing <span id="showing-count">12</span> of <span id="total-count">12</span></span>
       </div>
     </div>
   </div>
@@ -70,7 +75,7 @@
         <article class="archive-card" data-category="civic">
           <div class="archive-card-img">
             <a href="project-detail.html?id=smart-city" style="display:block;width:100%;height:100%;">
-              <image-slot id="project-01" src="resources/selvachinthamani/smart-city.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+              <img src="resources/rs/smart-city-1280.jpg" srcset="resources/rs/smart-city-640.jpg 640w, resources/rs/smart-city-1280.jpg 1280w" sizes="(max-width: 968px) 100vw, 33vw" alt="Smart City lighting at Selvachinthamani Lake" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
             </a>
           </div>
           <div class="archive-card-header">
@@ -86,7 +91,7 @@
         <article class="archive-card" data-category="civic">
           <div class="archive-card-img">
             <a href="project-detail.html?id=thiruvalluvar-statue" style="display:block;width:100%;height:100%;">
-              <image-slot id="project-02" src="resources/statue.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+              <img src="resources/rs/statue-2000.jpg" srcset="resources/rs/statue-640.jpg 640w, resources/rs/statue-1280.jpg 1280w, resources/rs/statue-2000.jpg 2000w" sizes="(max-width: 968px) 100vw, 33vw" alt="Thiruvalluvar Statue illuminated at Kurichi Lake" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
             </a>
           </div>
           <div class="archive-card-header">
@@ -102,7 +107,7 @@
         <article class="archive-card" data-category="civic">
           <div class="archive-card-img">
             <a href="project-detail.html?id=gd-naidu-bridge" style="display:block;width:100%;height:100%;position:relative;">
-              <image-slot id="project-03" src="resources/gd-naidu-bridge/gd-naidu-1.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+              <img src="resources/rs/gd-naidu-1-2000.jpg" srcset="resources/rs/gd-naidu-1-640.jpg 640w, resources/rs/gd-naidu-1-1280.jpg 1280w, resources/rs/gd-naidu-1-2000.jpg 2000w" sizes="(max-width: 968px) 100vw, 33vw" alt="G.D. Naidu Bridge illuminated at night" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
               <span class="img-caption">Source: The Hindu</span>
             </a>
           </div>
@@ -119,7 +124,7 @@
         <article class="archive-card" data-category="civic">
           <div class="archive-card-img">
             <a href="project-detail.html?id=horse-court" style="display:block;width:100%;height:100%;">
-              <image-slot id="project-04" src="resources/horse-court.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+              <img src="resources/rs/horse-court-1237.jpg" srcset="resources/rs/horse-court-640.jpg 640w, resources/rs/horse-court-1237.jpg 1237w" sizes="(max-width: 968px) 100vw, 33vw" alt="Horse Court heritage building under accent lighting" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
             </a>
           </div>
           <div class="archive-card-header">
@@ -135,7 +140,7 @@
         <article class="archive-card" data-category="industrial">
           <div class="archive-card-img">
             <a href="project-detail.html?id=makino" style="display:block;width:100%;height:100%;">
-              <image-slot id="project-05" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+              <div class="img-placeholder">Photography coming soon</div>
             </a>
           </div>
           <div class="archive-card-header">
@@ -147,18 +152,18 @@
           <p>A high-performance industrial lighting solution maximizing productivity and energy efficiency.</p>
         </article>
 
-        <!-- Project 6 (Commercial) -->
-        <article class="archive-card" data-category="commercial">
+        <!-- Project 6 (Residential) -->
+        <article class="archive-card" data-category="residential">
           <div class="archive-card-img">
             <a href="project-detail.html?id=karthipuram" style="display:block;width:100%;height:100%;">
-              <image-slot id="project-06" shape="rounded" radius="8" placeholder="Drop project image" style="width:100%;height:100%;"></image-slot>
+              <div class="img-placeholder">Photography coming soon</div>
             </a>
           </div>
           <div class="archive-card-header">
             <div class="archive-card-header-left">
               <h3><a href="project-detail.html?id=karthipuram">Karthipuram, <em>Residential Layouts</em></a></h3>
             </div>
-            <div class="archive-card-cat">Commercial</div>
+            <div class="archive-card-cat">Residential</div>
           </div>
           <p>A comprehensive ₹2.5 crore township layout lighting scheme with 650 custom street poles.</p>
         </article>
@@ -166,8 +171,42 @@
         <!-- Project 7 (Hospitality) -->
         <article class="archive-card" data-category="hospitality">
           <div class="archive-card-img">
+            <a href="project-detail.html?id=marriott-trichy" style="display:block;width:100%;height:100%;position:relative;">
+              <img src="resources/rs/marriott-trichy-facade-1280.jpg" srcset="resources/rs/marriott-trichy-facade-640.jpg 640w, resources/rs/marriott-trichy-facade-1280.jpg 1280w" sizes="(max-width: 968px) 100vw, 33vw" alt="Courtyard by Marriott Tiruchirappalli facade lit at dusk" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
+              <span class="img-caption">Source: Marriott</span>
+            </a>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3><a href="project-detail.html?id=marriott-trichy">Courtyard by Marriott, <em>Tiruchirappalli</em></a></h3>
+            </div>
+            <div class="archive-card-cat">Hospitality</div>
+          </div>
+          <p>Arrival forecourt, guest floors, dining, 20,000 sq ft of banqueting and leisure areas for the 108-key Courtyard by Marriott.</p>
+        </article>
+
+        <!-- Project 8 (Hospitality) -->
+        <article class="archive-card" data-category="hospitality">
+          <div class="archive-card-img">
+            <a href="project-detail.html?id=marriott-madurai" style="display:block;width:100%;height:100%;position:relative;">
+              <img src="resources/rs/marriott-madurai-exterior-1280.jpg" srcset="resources/rs/marriott-madurai-exterior-640.jpg 640w, resources/rs/marriott-madurai-exterior-1280.jpg 1280w" sizes="(max-width: 968px) 100vw, 33vw" alt="Courtyard by Marriott Madurai exterior at dusk" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
+              <span class="img-caption">Source: Marriott</span>
+            </a>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3><a href="project-detail.html?id=marriott-madurai">Courtyard by Marriott, <em>Madurai</em></a></h3>
+            </div>
+            <div class="archive-card-cat">Hospitality</div>
+          </div>
+          <p>Exterior and pool-deck lighting for the 102-key Courtyard by Marriott in Madurai.</p>
+        </article>
+
+        <!-- Project 9 (Hospitality) -->
+        <article class="archive-card" data-category="hospitality">
+          <div class="archive-card-img">
             <a href="project-detail.html?id=darza-resort" style="display:block;width:100%;height:100%;">
-              <image-slot id="project-07" src="resources/darza-resort/darza-1.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+              <img src="resources/rs/darza-3-2000.jpg" srcset="resources/rs/darza-3-640.jpg 640w, resources/rs/darza-3-1280.jpg 1280w, resources/rs/darza-3-2000.jpg 2000w" sizes="(max-width: 968px) 100vw, 33vw" alt="Aquamarine pool lit at night at Darza Luxury Resort, with the Sanjeevani peaks behind" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
             </a>
           </div>
           <div class="archive-card-header">
@@ -179,22 +218,160 @@
           <p>Minimalist Scandinavian landscape and villa lighting set against the backdrop of Sanjeevani peaks.</p>
         </article>
 
-        <!-- Project 8 (Commercial) -->
-        <article class="archive-card" data-category="commercial">
+        <!-- Project 10 (Residential) -->
+        <article class="archive-card" data-category="residential">
           <div class="archive-card-img">
             <a href="project-detail.html?id=cotton-city" style="display:block;width:100%;height:100%;">
-              <image-slot id="project-08" src="resources/cotton-city/0M9A9254.jpg" shape="rounded" radius="8" style="width:100%;height:100%;"></image-slot>
+              <img src="resources/rs/cotton-9254-2000.jpg" srcset="resources/rs/cotton-9254-640.jpg 640w, resources/rs/cotton-9254-1280.jpg 1280w, resources/rs/cotton-9254-2000.jpg 2000w" sizes="(max-width: 968px) 100vw, 33vw" alt="Cotton City project lighting" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
             </a>
           </div>
           <div class="archive-card-header">
             <div class="archive-card-header-left">
               <h3><a href="project-detail.html?id=cotton-city">Cotton City, <em>Coimbatore</em></a></h3>
             </div>
-            <div class="archive-card-cat">Commercial</div>
+            <div class="archive-card-cat">Residential</div>
           </div>
           <p>Architectural facade and ambient landscape lighting designed for the Cotton City landmark.</p>
         </article>
 
+        <!-- Project 11 (Hospitality) -->
+        <article class="archive-card" data-category="hospitality">
+          <div class="archive-card-img">
+            <a href="project-detail.html?id=mango-hill-ooty" style="display:block;width:100%;height:100%;">
+              <img src="resources/rs/mango-hill-facade-7-900.jpg" srcset="resources/rs/mango-hill-facade-7-640.jpg 640w, resources/rs/mango-hill-facade-7-900.jpg 900w" sizes="(max-width: 968px) 100vw, 33vw" alt="Mango Hill Shola resort pathway and villa facade lighting at dusk, Ooty" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
+            </a>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3><a href="project-detail.html?id=mango-hill-ooty">Mango Hill Shola, <em>Ooty</em></a></h3>
+            </div>
+            <div class="archive-card-cat">Hospitality</div>
+          </div>
+          <p>Facade, pathway and landscape lighting for a Tuscan-style villa resort above the carrot fields near Ooty Lake.</p>
+        </article>
+
+        <!-- Project 12 (Civic) -->
+        <article class="archive-card" data-category="civic">
+          <div class="archive-card-img">
+            <a href="project-detail.html?id=kalingarayan-bhavani" style="display:block;width:100%;height:100%;">
+              <img src="resources/rs/kalingarayan-1280.jpg" srcset="resources/rs/kalingarayan-640.jpg 640w, resources/rs/kalingarayan-1280.jpg 1280w" sizes="(max-width: 968px) 100vw, 33vw" alt="Kalingarayan statue and domed pavilion with landscape lighting, Bhavani" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" loading="lazy" decoding="async">
+            </a>
+          </div>
+          <div class="archive-card-header">
+            <div class="archive-card-header-left">
+              <h3><a href="project-detail.html?id=kalingarayan-bhavani">Kalingarayan Statue, <em>Bhavani</em></a></h3>
+            </div>
+            <div class="archive-card-cat">Civic</div>
+          </div>
+          <p>Memorial and garden lighting for the Kalingarayan statue and its domed pavilion.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Wider project register (text only) -->
+  <section class="register-section">
+    <div class="container">
+      <div class="register-head">
+        <div class="eyebrow"><span class="num">02</span><span>Also on Record</span></div>
+        <h2 class="display-h">More, across <em>three decades.</em></h2>
+        <p>The archive above is what we have photographed. Below is a selection from the many
+           more we have supplied and specified for since 1988 — listed by sector.</p>
+      </div>
+      <div class="register-grid">
+      <div class="register-group">
+        <h3>Hospitality & Leisure</h3>
+        <ul>
+          <li><span class="reg-name">Kailash Parbat</span><span class="reg-place">Ooty</span></li>
+          <li><span class="reg-name">Annapoorna</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Chess Café</span><span class="reg-place">Peravoor</span></li>
+          <li><span class="reg-name">Cini Spa</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Vel Cinemas</span><span class="reg-place">Sivagiri</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Civic &amp; Public Realm</h3>
+        <ul>
+          <li><span class="reg-name">Semmozhi Poonga</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Coonoor Railway Station &amp; Heritage Station</span><span class="reg-place">Coonoor</span></li>
+          <li><span class="reg-name">Cruz Fernandez Memorial</span><span class="reg-place">Thoothukudi</span></li>
+          <li><span class="reg-name">Collector's Bungalow</span><span class="reg-place">Erode</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Healthcare</h3>
+        <ul>
+          <li><span class="reg-name">KMCH</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Care24 &amp; Kalyani Kidney Care</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">Avitis Hospital</span><span class="reg-place">Palakkad</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Education</h3>
+        <ul>
+          <li><span class="reg-name">Ramakrishna College</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Nandha College</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">Karpagam College</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">DJ Academy of Design</span><span class="reg-place">Coimbatore</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Industrial &amp; Manufacturing</h3>
+        <ul>
+          <li><span class="reg-name">Milky Mist</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">Mettur Thermal Power Plant</span><span class="reg-place">Mettur</span></li>
+          <li><span class="reg-name">Sakthi Sugars</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">Ampo Valves</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">CRI Pumps</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Lakshmi Mill</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">KKSK Leather</span><span class="reg-place">Erode</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Textiles &amp; Apparel</h3>
+        <ul>
+          <li><span class="reg-name">SP Apparels — Jockey</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Nethaji Apparel Park</span><span class="reg-place">Perumanallur</span></li>
+          <li><span class="reg-name">KRC</span><span class="reg-place">Tiruppur</span></li>
+          <li><span class="reg-name">Mangai Petticoats</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">Shiny Textile Process</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Halls &amp; Event Venues</h3>
+        <ul>
+          <li><span class="reg-name">Kongu Thirumana Maaligai</span><span class="reg-place">Mohanur</span></li>
+          <li><span class="reg-name">Kanchana Mahal</span><span class="reg-place">Bargur, Krishnagiri</span></li>
+          <li><span class="reg-name">Athish Mahal</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Green Pixel — The Party Lawn</span><span class="reg-place">Coimbatore</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Retail</h3>
+        <ul>
+          <li><span class="reg-name">Tex Valley</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">Bala Silks</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">TVS Lotus</span><span class="reg-place">Erode</span></li>
+          <li><span class="reg-name">Sri Sri Pazhamudhir Nilayam</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Esperto Car Care</span><span class="reg-place">Coimbatore</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Residential</h3>
+        <ul>
+          <li><span class="reg-name">Mayflower</span><span class="reg-place">Coimbatore</span></li>
+          <li><span class="reg-name">Nivasan Homes</span><span class="reg-place">Coimbatore</span></li>
+        </ul>
+      </div>
+      <div class="register-group">
+        <h3>Spiritual</h3>
+        <ul>
+          <li><span class="reg-name">Dhyanalinga, Isha Yoga Centre</span><span class="reg-place">Vellingiri</span></li>
+          <li><span class="reg-name">Selvanayagi Amman Temple</span><span class="reg-place">Keeranur</span></li>
+        </ul>
+      </div>
       </div>
     </div>
   </section>
@@ -239,7 +416,7 @@
           <h4>Sectors</h4>
           <ul>
             <li><a href="projects.html?filter=residential">Residential</a></li>
-            <li><a href="projects.html?filter=commercial">Commercial</a></li>
+            <li><a href="projects.html?filter=hospitality">Hospitality</a></li>
             <li><a href="projects.html?filter=industrial">Industrial</a></li>
             <li><a href="projects.html?filter=civic">Civic</a></li>
           </ul>
@@ -263,25 +440,17 @@
     </div>
   </footer>
 
-  <!-- Image Slot Component -->
-  <script src="image-slot.js"></script>
+  <script src="nav.js" defer></script>
 
   <!-- Dynamic Filter Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Nav scroll behavior
-      const nav = document.getElementById('nav');
-      const onScroll = () => {
-        if (window.scrollY > 80) nav.classList.add('scrolled');
-        else nav.classList.remove('scrolled');
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-
       // Dynamic Filtering Logic
       const filterBtns = document.querySelectorAll('.filter-btn');
       const cards = document.querySelectorAll('.archive-card');
       const countEl = document.getElementById('showing-count');
+      const totalEl = document.getElementById('total-count');
+      if (totalEl) totalEl.textContent = cards.length;
 
       const applyFilter = (filterVal) => {
         let visibleCount = 0;
@@ -322,6 +491,23 @@
       const urlFilter = new URLSearchParams(window.location.search).get('filter');
       if (urlFilter) {
         applyFilter(urlFilter.toLowerCase());
+      }
+
+      // The category row scrolls sideways on narrow screens. Drop the edge
+      // fade once there's nothing left to scroll to.
+      const cats = document.querySelector('.filter-categories');
+      if (cats) {
+        const syncFade = () => {
+          const atEnd = cats.scrollLeft + cats.clientWidth >= cats.scrollWidth - 2;
+          cats.classList.toggle('at-end', atEnd);
+        };
+        cats.addEventListener('scroll', syncFade, { passive: true });
+        window.addEventListener('resize', syncFade);
+        syncFade();
+
+        // Keep the selected category in view when a filter is applied by URL.
+        const active = cats.querySelector('.filter-btn.active');
+        if (active) active.scrollIntoView({ inline: 'center', block: 'nearest' });
       }
     });
   </script>
