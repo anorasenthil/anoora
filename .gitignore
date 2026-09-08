@@ -7,3 +7,7 @@ resources/Makino/
 # tracked source folders, but excluded on the same call: resources/rs/ holds
 # what the pages load.
 resources/Milky mist cafe/
+
+# Manual backup of the project-names document taken before a round of edits.
+# "Anoora Project Names.docx" itself is tracked.
+Anoora Project Names.BACKUP-before-links.docx
