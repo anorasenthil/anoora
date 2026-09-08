@@ -200,7 +200,7 @@
   <script>
     // Responsive gallery sources. Variants live at resources/rs/<slug>-<width>.jpg;
     // this map records which widths were actually generated for each image.
-    const RS_WIDTHS = {"statue":[640,1280,2000],"horse-court":[640,1237],"darza-1":[640,1280,2000],"darza-2":[640,1280,2000],"darza-3":[640,1280,2000],"darza-5":[640,1280,2000],"darza-6":[640,1280,2000],"smart-city":[640,1280],"selvachinthamani-2":[640,1280,2000],"gd-naidu-1":[640,1280,2000],"gd-naidu-2":[365],"gd-naidu-3":[640,765],"cotton-9254":[640,1280,2000],"cotton-9255":[640,1280,2000],"cotton-9256":[640,1280,2000],"cotton-9257":[640,1280,2000],"cotton-9258":[640,1280,2000],"cotton-9260":[640,1280,2000],"cotton-9261":[640,1280,2000],"cotton-9262":[640,1280,2000],"cotton-9264":[640,1280,2000],"cotton-9266":[640,1280,2000],"cotton-9268":[640,1280,2000],"cotton-9269":[640,1280,2000],"cotton-9270":[640,1280,2000],"cotton-9271":[640,1280,2000],"cotton-9272":[640,1280,2000],"marriott-trichy-facade":[640,1280],"marriott-trichy-pool":[640,1280],"marriott-trichy-dining":[640,1280],"marriott-trichy-kitchen":[640,1280],"marriott-trichy-banquet":[640,1280],"marriott-trichy-gym":[640,1280],"marriott-trichy-room":[640,1280],"marriott-trichy-bath":[640,1280],"marriott-madurai-exterior":[640,1280],"marriott-madurai-pool":[640,1280],"mango-hill-drone-1":[640,900],"mango-hill-drone-3":[640,900],"mango-hill-facade-2":[640,900],"mango-hill-facade-3":[640,900],"mango-hill-facade-5":[640,900],"mango-hill-facade-7":[640,900],"kalingarayan":[640,1280]};
+    const RS_WIDTHS = {"statue":[640,1280,2000],"horse-court":[640,1237],"darza-1":[640,1280,2000],"darza-2":[640,1280,2000],"darza-3":[640,1280,2000],"darza-5":[640,1280,2000],"darza-6":[640,1280,2000],"smart-city":[640,1280],"selvachinthamani-2":[640,1280,2000],"gd-naidu-1":[640,1280,2000],"gd-naidu-2":[365],"gd-naidu-3":[640,765],"cotton-9254":[640,1280,2000],"cotton-9255":[640,1280,2000],"cotton-9256":[640,1280,2000],"cotton-9257":[640,1280,2000],"cotton-9258":[640,1280,2000],"cotton-9260":[640,1280,2000],"cotton-9261":[640,1280,2000],"cotton-9262":[640,1280,2000],"cotton-9264":[640,1280,2000],"cotton-9266":[640,1280,2000],"cotton-9268":[640,1280,2000],"cotton-9269":[640,1280,2000],"cotton-9270":[640,1280,2000],"cotton-9271":[640,1280,2000],"cotton-9272":[640,1280,2000],"marriott-trichy-facade":[640,1280],"marriott-trichy-pool":[640,1280],"marriott-trichy-dining":[640,1280],"marriott-trichy-kitchen":[640,1280],"marriott-trichy-banquet":[640,1280],"marriott-trichy-gym":[640,1280],"marriott-trichy-room":[640,1280],"marriott-trichy-bath":[640,1280],"marriott-madurai-exterior":[640,1280],"marriott-madurai-pool":[640,1280],"mango-hill-drone-1":[640,900],"mango-hill-drone-3":[640,900],"mango-hill-facade-2":[640,900],"mango-hill-facade-3":[640,900],"mango-hill-facade-5":[640,900],"mango-hill-facade-7":[640,900],"kalingarayan":[640,1280],"makino-1":[640,1280,2000],"makino-2":[640,1280,2000],"makino-3":[640,1280,2000],"makino-4":[640,1280,2000],"makino-5":[640,1280,2000],"makino-6":[640,1280,2000],"makino-8":[640,1280,2000]};
     function srcsetFor(src) {
       const m = /resources\/rs\/(.+)-(\d+)\.jpg$/.exec(src);
       if (!m || !RS_WIDTHS[m[1]]) return '';
@@ -288,16 +288,25 @@
         title: 'Makino Office & Factory',
         italicTitle: 'Industrial Facility',
         breadcrumb: 'Anoora / Industrial',
-        lead: 'A high-performance industrial lighting solution maximizing productivity, safety, and energy efficiency.',
-        location: 'Industrial Park, Coimbatore',
+        lead: 'Arrival lobby, meeting rooms, staff canteen and campus landscape lit across the machine-tool maker’s India facility.',
+        location: '— to confirm —',
         category: 'Industrial',
-        year: 'Planned',
+        year: '2023',
         client: 'Makino India',
-        lighting: 'High-Bay LED Fixtures',
-        mainImage: '',
-        galleryImages: [],
-        narrativeHeading: 'Precision & <em>Safety.</em>',
-        narrativeBody: '<p>Industrial lighting demands extreme durability, uniform lux distribution, and glare control to ensure worker safety. Our proposed design for the Makino facility focuses on energy-efficient high-bay fixtures that reduce shadow areas on the production floor.</p><p>The system is fully compatible with intelligent dimming controls that respond to ambient natural light, delivering optimal visibility while minimizing energy footprint.</p>'
+        lighting: '— to confirm —',
+        mainImage: 'resources/rs/makino-1-2000.jpg',
+        mainSrcset: 'resources/rs/makino-1-640.jpg 640w, resources/rs/makino-1-1280.jpg 1280w, resources/rs/makino-1-2000.jpg 2000w',
+        galleryImages: [
+          'resources/rs/makino-1-1280.jpg',
+          'resources/rs/makino-2-1280.jpg',
+          'resources/rs/makino-3-1280.jpg',
+          'resources/rs/makino-4-1280.jpg',
+          'resources/rs/makino-5-1280.jpg',
+          'resources/rs/makino-6-1280.jpg',
+          'resources/rs/makino-8-1280.jpg'
+        ],
+        narrativeHeading: 'Around the <em>Floor.</em>',
+        narrativeBody: '<p>Makino builds machine tools, but most of the working day happens around the production floor rather than on it — the walk in from the gate, the arrival lobby, the meeting rooms, the canteen between shifts. That is where this scheme sits.</p><p>The double-height entrance is lit from continuous linear runs set into the ceiling, kept narrow and high so the glazing reads as a clean grid after dark instead of a wall of reflections. Meeting rooms pair recessed downlights with the acoustic baffles overhead. The canteen runs on circular surface luminaires spaced to hold an even level across the tables, and outside, bollards and low poles pick out the stone path and lawn so the walk between blocks stays legible at night, under the lit signage on the roofline.</p>'
       },
       'karthipuram': {
         title: 'Karthipuram Township',
