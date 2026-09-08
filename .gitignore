@@ -1,0 +1,4 @@
+# Camera originals for the Makino shoot: 85 MB of 8192x5464 JPEGs that nothing
+# on the site references. The compressed variants generated from them live in
+# resources/rs/ and are tracked. Kept out of history to hold the repo down.
+resources/Makino/
