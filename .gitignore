@@ -2,3 +2,8 @@
 # on the site references. The compressed variants generated from them live in
 # resources/rs/ and are tracked. Kept out of history to hold the repo down.
 resources/Makino/
+
+# Milky Mist Cafe source photos. Smaller than the Makino set and closer to the
+# tracked source folders, but excluded on the same call: resources/rs/ holds
+# what the pages load.
+resources/Milky mist cafe/
