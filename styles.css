@@ -2071,32 +2071,45 @@ footer {
   object-fit: cover;
 }
 
-.project-detail-narrative-section {
-  padding: 2rem 0 6rem;
+/* ========= BRIEF + PLATES ========= */
+/* The brief pins on the left while the photographs scroll past on the right. */
+.project-plates-section {
+  padding: 2rem 0 8rem;
   background: var(--paper);
 }
 
-.project-detail-narrative-grid {
+.plates-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   gap: 6rem;
   align-items: start;
 }
 
-.project-detail-narrative-left h2 {
+.plates-brief {
+  position: sticky;
+  top: 7rem; /* clears the fixed nav */
+}
+
+.plates-brief .eyebrow {
+  color: rgba(14, 14, 12, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.plates-brief h2 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 500;
   line-height: 1.1;
   color: var(--ink);
+  margin-bottom: 2rem;
 }
 
-.project-detail-narrative-left h2 em {
+.plates-brief h2 em {
   font-style: italic;
   color: var(--gold);
 }
 
-.project-detail-narrative-right .project-story {
+.plates-brief .project-story {
   font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(14, 14, 12, 0.7);
@@ -2105,35 +2118,71 @@ footer {
   gap: 1.5rem;
 }
 
-.project-detail-gallery-section {
-  padding: 6rem 0;
-  background: var(--paper-warm);
-  border-top: 1px solid var(--rule-soft);
-  border-bottom: 1px solid var(--rule-soft);
+/* Single-image projects have nothing to scroll past: the brief takes the old two-column layout. */
+.plates-grid.no-plates {
+  grid-template-columns: 1fr;
 }
-
-.project-detail-gallery-grid {
+.plates-grid.no-plates .plates-brief {
+  position: static;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3.5rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 6rem;
+  align-items: start;
+}
+.plates-grid.no-plates .plates {
+  display: none;
 }
 
-.project-detail-gallery-item {
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #ffffff;
-  padding: 1rem;
-  box-shadow: 0 10px 40px rgba(14, 14, 12, 0.03);
-  border: 1px solid rgba(14, 14, 12, 0.04);
+.plates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 1.5rem;
 }
 
-.project-detail-gallery-item image-slot, 
-.project-detail-gallery-item img {
+.plate {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.plate img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 12px;
+  background: var(--paper-warm);
+}
+
+/* Portraits sit two-up when they have a portrait neighbour; a lone one is capped at 80vh and centred.
+   ponytail: three portraits in a row leave one half-width on its own line; pair sources deliberately. */
+.plate.is-portrait:has(+ .plate.is-portrait),
+.plate.is-portrait + .plate.is-portrait {
+  grid-column: span 1;
+}
+.plate.is-portrait img {
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto;
+}
+
+.plate figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(14, 14, 12, 0.45);
+}
+
+.plate figcaption .num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0;
+  color: var(--gold);
 }
 
 .project-detail-pagination {
@@ -2190,13 +2239,16 @@ footer {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .project-detail-narrative-grid {
+  .plates-grid,
+  .plates-grid.no-plates .plates-brief {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
   }
-  .project-detail-gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .plates-brief {
+    position: static;
+  }
+  .plates {
+    gap: 2rem 1rem;
   }
   .project-detail-pagination-inner {
     flex-direction: column;
@@ -2224,106 +2276,6 @@ footer {
   border-radius: 4px;
   z-index: 5;
   pointer-events: none;
-}
-
-/* Horizontal Gallery Slider */
-.gallery-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.gallery-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.gallery-count {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  color: var(--gold);
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.gallery-arrow {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--rule);
-  background: var(--card-bg, #fff);
-  color: var(--fg);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: border-color 250ms var(--ease-out), color 250ms var(--ease-out),
-              transform 200ms var(--ease-out), box-shadow 250ms var(--ease-out);
-}
-
-.gallery-arrow:active {
-  transform: scale(0.92);
-  transition: transform 120ms ease-out;
-}
-
-.gallery-arrow:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-  transform: none;
-  border-color: var(--rule);
-  color: var(--fg);
-}
-
-.gallery-scroll-container {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding-bottom: 1.5rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--gold) transparent;
-}
-
-.gallery-scroll-container::-webkit-scrollbar {
-  height: 4px;
-}
-.gallery-scroll-container::-webkit-scrollbar-track {
-  background: rgba(14, 14, 12, 0.05);
-  border-radius: 2px;
-}
-.gallery-scroll-container::-webkit-scrollbar-thumb {
-  background: var(--gold);
-  border-radius: 2px;
-}
-
-.gallery-slide {
-  flex: 0 0 650px;
-  max-width: 85vw;
-  aspect-ratio: 16 / 10;
-  scroll-snap-align: start;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  background: rgba(14, 14, 12, 0.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-}
-
-.gallery-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@media (max-width: 768px) {
-  .gallery-slide {
-    flex: 0 0 85vw;
-    aspect-ratio: 4 / 3;
-  }
 }
 
 /* ========= MOBILE REFINEMENTS ========= */
@@ -2372,8 +2324,6 @@ footer {
     padding: 0.35rem 0;
     margin-bottom: 0;
   }
-  .gallery-arrow { width: 48px; height: 48px; }
-
   .filter-bar-inner { position: relative; }
   .filter-categories {
     /* Fade the trailing edge so the hidden categories read as scrollable. */
@@ -2394,7 +2344,7 @@ footer {
   .eyebrow, .project-category, .brands-tier-label,
   .breadcrumb, .project-breadcrumb, .sector-num,
   .footer-col h4, .img-caption, .field label,
-  .archive-card-cat, .filter-counter, .gallery-count { font-size: 0.75rem; }
+  .archive-card-cat, .filter-counter { font-size: 0.75rem; }
 
   /* Inline links in prose still need a thumb-sized hit area. */
   .breadcrumb a, .info-block .value a, .back-link {
@@ -2535,15 +2485,6 @@ footer {
   }
   .pagination-link:hover {
     opacity: 0.7;
-  }
-  .gallery-arrow:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  }
-  .gallery-slide:hover img {
-    transform: scale(1.03);
   }
 }
 

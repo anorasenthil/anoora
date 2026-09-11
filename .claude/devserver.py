@@ -8,7 +8,7 @@ class H(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 port = int(sys.argv[1]) if len(sys.argv) > 1 else 8899
-socketserver.TCPServer.allow_reuse_address = True
-with socketserver.TCPServer(("", port), H) as httpd:
+socketserver.ThreadingTCPServer.allow_reuse_address = True  # one stalled connection must not block the rest
+with socketserver.ThreadingTCPServer(("", port), H) as httpd:
     print(f"serving on http://localhost:{port}")
     httpd.serve_forever()

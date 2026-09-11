@@ -79,45 +79,28 @@
 
       <!-- Main Project Hero Image Slot -->
       <div class="project-detail-main-img-wrap">
-        <img id="main-project-img" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" fetchpriority="high" decoding="async">
+        <img id="main-project-img" alt="" fetchpriority="high" decoding="async">
       </div>
 
     </div>
   </section>
 
-  <!-- Philosophical Narrative Section -->
-  <section class="project-detail-narrative-section">
+  <!-- Brief + Plates: the narrative pins on the left while the photographs scroll past -->
+  <section class="project-plates-section">
     <div class="container">
-      <div class="project-detail-narrative-grid">
-        <div class="project-detail-narrative-left">
-          <h2 id="narrative-heading">The Considered <em>Approach.</em></h2>
-        </div>
-        <div class="project-detail-narrative-right">
+      <div class="plates-grid" id="plates-grid">
+        <div class="plates-brief">
+          <div class="plates-brief-head">
+            <div class="eyebrow"><span class="num">01</span><span>The Brief</span></div>
+            <h2 id="narrative-heading">The Considered <em>Approach.</em></h2>
+          </div>
           <div class="project-story" id="narrative-body">
             <p>Story details go here...</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Detail Gallery Carousel -->
-  <section class="project-detail-gallery-section">
-    <div class="container">
-      <div class="gallery-header">
-        <div class="eyebrow" style="color: rgba(14,14,12,0.5); margin-bottom: 0;"><span class="num">02</span><span>Gallery</span></div>
-        <div class="gallery-controls">
-          <span class="gallery-count" id="gallery-counter">1 / 1</span>
-          <button class="gallery-arrow prev" id="gallery-prev" aria-label="Previous image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          </button>
-          <button class="gallery-arrow next" id="gallery-next" aria-label="Next image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
+        <div class="plates" id="plates">
+          <!-- Dynamically populated figures -->
         </div>
-      </div>
-      <div class="gallery-scroll-container" id="gallery-scroll-container">
-        <!-- Dynamically populated scroll slides -->
       </div>
     </div>
   </section>
@@ -521,7 +504,7 @@
       const mainImg = document.getElementById('main-project-img');
       if (project.mainImage) {
         mainImg.src = project.mainImage;
-        if (project.mainSrcset) mainImg.srcset = project.mainSrcset;
+        mainImg.srcset = project.mainSrcset || srcsetFor(project.mainImage);
         mainImg.sizes = '(max-width: 968px) 100vw, 60vw';
         mainImg.alt = `${project.title} — project photography`;
       } else {
@@ -529,45 +512,28 @@
           '<div class="img-placeholder">Photography coming soon</div>';
       }
 
-      // Populate Gallery Scroll Container
-      const galleryContainer = document.getElementById('gallery-scroll-container');
-      const galleryCounter = document.getElementById('gallery-counter');
-      const prevBtn = document.getElementById('gallery-prev');
-      const nextBtn = document.getElementById('gallery-next');
-
-      const galleryImages = project.galleryImages || (project.mainImage ? [project.mainImage] : []);
-
-      if (galleryImages.length > 0) {
-        galleryContainer.innerHTML = galleryImages.map((imgSrc, i) => `
-          <div class="gallery-slide">
-            <img src="${imgSrc}" srcset="${srcsetFor(imgSrc)}" sizes="(max-width: 768px) 85vw, 650px" alt="${project.title} photo ${i + 1}" loading="lazy" decoding="async">
-          </div>
+      // Plates: every gallery frame except the hero, shown whole, numbered.
+      const plates = (project.galleryImages || []).filter((src) => src !== project.mainImage);
+      const platesEl = document.getElementById('plates');
+      if (plates.length) {
+        const pad = (n) => String(n).padStart(2, '0');
+        platesEl.innerHTML = plates.map((src, i) => `
+          <figure class="plate reveal">
+            <img src="${src}" srcset="${srcsetFor(src)}" sizes="(max-width: 968px) 100vw, 55vw" alt="${project.title} photo ${i + 1}" loading="lazy" decoding="async">
+            <figcaption><span class="num">${pad(i + 1)}</span><span>/ ${pad(plates.length)}</span></figcaption>
+          </figure>
         `).join('');
-
-        const updateControls = () => {
-          const scrollLeft = galleryContainer.scrollLeft;
-          const slideWidth = galleryContainer.firstElementChild ? galleryContainer.firstElementChild.offsetWidth + 24 : 1;
-          const currentIndex = Math.min(Math.round(scrollLeft / slideWidth) + 1, galleryImages.length);
-          galleryCounter.textContent = `${currentIndex} / ${galleryImages.length}`;
-          prevBtn.disabled = scrollLeft <= 10;
-          nextBtn.disabled = scrollLeft + galleryContainer.clientWidth >= galleryContainer.scrollWidth - 10;
-        };
-
-        galleryContainer.addEventListener('scroll', updateControls, { passive: true });
-        
-        prevBtn.addEventListener('click', () => {
-          const slideWidth = galleryContainer.firstElementChild ? galleryContainer.firstElementChild.offsetWidth + 24 : 400;
-          galleryContainer.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        // Portrait frames pair two-up (see .plate.is-portrait in styles.css).
+        platesEl.querySelectorAll('img').forEach((img) => {
+          const mark = () => img.closest('.plate').classList.toggle('is-portrait', img.naturalHeight > img.naturalWidth);
+          img.complete && img.naturalWidth ? mark() : img.addEventListener('load', mark);
         });
-
-        nextBtn.addEventListener('click', () => {
-          const slideWidth = galleryContainer.firstElementChild ? galleryContainer.firstElementChild.offsetWidth + 24 : 400;
-          galleryContainer.scrollBy({ left: slideWidth, behavior: 'smooth' });
-        });
-
-        updateControls();
+        const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }), { rootMargin: '0px 0px -10% 0px' });
+        platesEl.querySelectorAll('.plate').forEach((el) => io.observe(el));
       } else {
-        document.querySelector('.project-detail-gallery-section').style.display = 'none';
+        document.getElementById('plates-grid').classList.add('no-plates');
       }
 
       // Pagination Links (Loop across active projects)
