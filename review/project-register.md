@@ -24,9 +24,9 @@ All four are built and rendering. Every image in each folder is in its gallery.
 | Project | Category | Images | Confirmed from public sources | Still needed from you |
 | --- | --- | --- | --- | --- |
 | **Courtyard by Marriott, Tiruchirappalli** | Hospitality | 8 / 8 | Opened 4 Nov 2022 · 108 keys · Collector's Road · 20,000 sq ft banqueting (largest in city) · outlets Trichy Kitchen, Soma, T-Lounge · first international brand in Trichy | Fixture brands · Anoora's exact scope · **permission to publish Marriott's photos** |
-| **Courtyard by Marriott, Madurai** | Hospitality | 2 / 2 | 102 keys | Year · fixture brands · scope · **same permission question** |
-| **Mango Hill Shola, Ooty** | Hospitality | 6 / 6 | Identified as the **Shola** property, not Central or Resort — Tuscan-style villas, arched windows, above carrot fields near Ooty Lake. (I had written "tea slopes"; corrected.) | Confirm it's Shola · year · fixture brands |
-| **Kalingarayan Statue, Bhavani** | Civic | 1 / 1 | Kalingarayan Anicut, built 1271–1283 by Kongu chieftain Kalingarayan Gounder; memorial park added under a 2017 state scheme | **Confirm my ID of `unnamed.jpg`** · year · client (district admin?) · fixture brands |
+| **Courtyard by Marriott, Madurai** | Hospitality | 2 / 2 | 102 keys | Fixture brands · scope · **same permission question** (no invoice date on record for Madurai) |
+| **Mango Hill Shola, Ooty** | Hospitality | 6 / 6 | Identified as the **Shola** property, not Central or Resort — Tuscan-style villas, arched windows, above carrot fields near Ooty Lake. (I had written "tea slopes"; corrected.) | Confirm it's Shola · fixture brands (invoice 12/8/24 → 2024) |
+| **Kalingarayan Statue, Bhavani** | Civic | 1 / 1 | Kalingarayan Anicut, built 1271–1283 by Kongu chieftain Kalingarayan Gounder; memorial park added under a 2017 state scheme | **Confirm my ID of `unnamed.jpg`** · client (district admin?) · fixture brands (invoice year 2017) |
 
 Fields I could not source show `— to confirm —` on the page so they're easy to spot.
 
